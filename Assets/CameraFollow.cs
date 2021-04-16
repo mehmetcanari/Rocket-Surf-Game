@@ -5,15 +5,10 @@ using DG.Tweening;
 
 public class CameraFollow : MonoBehaviour
 {
-    public ScoreCounter sc;
-
-    public Transform target;
     public Vector3 offset;
+    public ScoreCounter sc;
+    public Transform target;
     public DragShoot ds;
-
-    Vector3 lastPos;
-
-    bool shake;
 
     private void Start()
     {
@@ -23,20 +18,16 @@ public class CameraFollow : MonoBehaviour
     private void Update()
     {
         transform.position = target.position + offset;
+        
         if (ds.currentState == DragShoot.State.Fly)
         {
-            
             offset = Vector3.Lerp(offset, new Vector3(0, 50, -150), 0.2f);
         }
 
         if (ds.currentState == DragShoot.State.Crash)
         {
-            shake = true;
-            lastPos = transform.position;
-            
-
-            Debug.Log("True");
-            
+            sc.CalculateScore();
+                      
             if (ds.isEnded)
             {
                 //transform.DOShakePosition(3, 2, 5, 70, true);
@@ -47,33 +38,6 @@ public class CameraFollow : MonoBehaviour
             }
 
         }
-        if (shake)
-        {
-            StartCoroutine(Shake(.15f, .4f));
-            sc.CalculateScore();
-        }
-
         transform.LookAt(target);
-    }
-
-    public IEnumerator Shake(float duration, float magnitude)
-    {
-        Vector3 originalPos = lastPos;
-
-        float elapsed = 0.0f;
-
-        while (elapsed < duration)
-        {
-            float x = Random.Range(0, 0f) * magnitude;
-            float y = Random.Range(0f, 0f) * magnitude;
-
-            lastPos = new Vector3(x, y, originalPos.z);
-
-            elapsed += Time.deltaTime;
-
-            yield return null;
-        }
-
-        lastPos = originalPos;
     }
 }

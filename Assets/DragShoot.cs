@@ -9,7 +9,6 @@ public class DragShoot : MonoBehaviour
 {
     Vector3 mousePressDownPos;
     Vector3 mouseReleasePos;
-
     Vector2 m_startPos;
     Vector2 m_deltaPos;
     
@@ -17,12 +16,11 @@ public class DragShoot : MonoBehaviour
     bool useFuel = false;
     bool timerBool = false;
     bool shot = false;
-    bool isUp = false;
-
-    Rigidbody rb;
-
+    bool isRotating = false;
+    bool isStarted = false;
 
     public State currentState;
+    public Rigidbody rb;
     public GameObject explosion;
     public ParticleSystem rocketFire;
     public ParticleSystem crashExplosion;
@@ -34,11 +32,11 @@ public class DragShoot : MonoBehaviour
     public float swipeGap;
     public float startFuel = 100;
     public float speed;
+    private float fallSpeed = 75;
     float fuel;
     float usedSpeed;
     float timer = 2;
     float useFuelMult;
-    float rotate;
     float roll;
     public int scoreCount = 1;
 
@@ -58,9 +56,9 @@ public class DragShoot : MonoBehaviour
     void Start()
     {
         isEnded = false;
+        isStarted = false;
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         currentState = State.Idle;
-        rb = GetComponent<Rigidbody>();
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f;
         rocketTrails = GetComponentsInChildren<TrailRenderer>();
@@ -84,6 +82,7 @@ public class DragShoot : MonoBehaviour
                     Mathf.Lerp(item.gameObject.GetComponent<TrailRenderer>().time, 0, 0.25f);
             }
         }
+
         #endregion
 
         #region States
@@ -111,22 +110,26 @@ public class DragShoot : MonoBehaviour
                     DrawTrajectory.Instance.UpdateTrajectory(forceV, rb, transform.position);
                 }
             }
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) && !isStarted) //Trajectory Shoot
             {
                 DrawTrajectory.Instance.HideLine();
                 mouseReleasePos = Input.mousePosition;
                 Shoot(mousePressDownPos - mouseReleasePos);
                 useFuel = true;
+                isStarted = true;
+                Debug.Log(isStarted);
             }
             if (transform.position.y > 18)
             {
                 currentState = State.Fly;
             }
         }
+        
         if (useFuel)
         {
             fuel -= 0.1f * (useFuelMult / 100);
         }
+
         if (currentState == State.Fly)
         {
             rocketFire.gameObject.SetActive(true);
@@ -141,9 +144,12 @@ public class DragShoot : MonoBehaviour
                 useFuel = false;
             }
             if (Input.GetMouseButton(0))
-            {
-                isUp = true;
-                transform.DOLocalRotate(new Vector3(-60, 0, roll), 1.2f);
+            {   
+                if (!isRotating)
+                {
+                    transform.DOLocalRotate(new Vector3(-60, 0, roll), 0.5f); //Up force
+                }
+
                 m_deltaPos = (Vector2)Input.mousePosition - m_startPos;
                 fuel -= 0.1f;
 
@@ -151,31 +157,27 @@ public class DragShoot : MonoBehaviour
                 {
                     if (m_deltaPos.x > 0) //Delta X Positive
                     {
-                        transform.DOLocalRotate(new Vector3(0, 60, 0), 0.5f);
-                        //rotate = 60;
+                        isRotating = true;
+                        transform.DOLocalRotate(new Vector3(-60, 60, 0), 0.5f);
                     }
 
                     if (m_deltaPos.x < 0) //Delta X Negative
                     {
-                        transform.DOLocalRotate(new Vector3(0, -60, 0), 0.5f);
-                        //rotate = -60;
+                        isRotating = true;
+                        transform.DOLocalRotate(new Vector3(-60, -60, 0), 0.5f);
                     }
                 }
-                //if (m_deltaPos.x == 0)
-                //{
-                //    rotate = 0;
-                //}
+                else
+                {
+                    isRotating = false;
+                }
                 m_startPos = Input.mousePosition;
 
 
             }
             if (Input.GetMouseButtonUp(0))
             {
-                isUp = false;
-                if (!isUp)
-                {
-                    transform.DOLocalRotate(new Vector3(60, 0, 0), 2f);
-                }
+                transform.DOLocalRotate(new Vector3(60, 0, 0), 1f);
             }
             #endregion
         }
@@ -187,9 +189,12 @@ public class DragShoot : MonoBehaviour
         if (currentState == State.Fall)
         {
             transform.DORotate(new Vector3(60, 0, 0), 1.2f);
-            transform.Translate(Vector3.forward * 75 * Time.deltaTime);
+            transform.Translate(Vector3.forward * fallSpeed * Time.deltaTime);
             rb.velocity = Vector3.zero;
 
+            fallSpeed += 20 * Time.deltaTime;
+            Debug.Log(fallSpeed);
+            
             if (Input.GetMouseButton(0) && fuel > 0)
             {
                 currentState = State.Fly;
@@ -233,6 +238,7 @@ public class DragShoot : MonoBehaviour
         shot = true;
     }
 
+    #region Triggers / Colliders
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Fuel")
@@ -241,7 +247,6 @@ public class DragShoot : MonoBehaviour
             Destroy(other.gameObject);
             Instantiate(fuelExp, other.transform.position, Quaternion.identity);
         }
-
 
         if (other.gameObject.tag == "Ring")
         {
@@ -253,6 +258,7 @@ public class DragShoot : MonoBehaviour
                 item.gameObject.GetComponent<TrailRenderer>().time =
                     Mathf.Lerp(item.gameObject.GetComponent<TrailRenderer>().time, 1, 1f);
             }
+
             usedSpeed = speed * 2;
             roll = 250;
             transform.DORotate(new Vector3(0, 0, 250), 2f).OnComplete(() =>
@@ -282,9 +288,12 @@ public class DragShoot : MonoBehaviour
         gameObject.SetActive(false);
         Invoke("Restart", 4);
     }
+    #endregion
 
+    #region Methods
     public void Restart()
     {
         SceneManager.LoadScene(0);
     }
+    #endregion
 }

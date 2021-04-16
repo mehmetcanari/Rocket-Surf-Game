@@ -32,7 +32,7 @@ public class DragShoot : MonoBehaviour
     public float forceMultiplier;
     public float swerveForce;
     public float swipeGap;
-    public float startFuel = 100;
+    public float startFuel = 200;
     public float speed;
     private float fallSpeed = 75;
     float fuel;
@@ -106,7 +106,6 @@ public class DragShoot : MonoBehaviour
             {
                 Vector3 forceInit = (mousePressDownPos - Input.mousePosition);
                 Vector3 forceV = (new Vector3(forceInit.x, forceInit.y, forceInit.y)) * forceMultiplier;
-
 
                 if (!shot)
                 {
@@ -217,16 +216,19 @@ public class DragShoot : MonoBehaviour
         if (transform.position.z > 370 && transform.position.z < 375)
         {
             good.gameObject.SetActive(true);
+            good.transform.DOScale(new Vector3(5,1.5f,5),0.5f);
             Invoke("GoodFalse", 2);
         }
         if (transform.position.z > 880 && transform.position.z < 885)
         {
             amazing.gameObject.SetActive(true);
+            amazing.transform.DOScale(new Vector3(5, 1.5f, 5),0.5f);
             Invoke("AmazingFalse", 2);
         }
         if (transform.position.z > 1385 && transform.position.z < 1390)
         {
             perfect.gameObject.SetActive(true);
+            perfect.transform.DOScale(new Vector3(5, 1.5f, 5), 0.5f);
             Invoke("PerfectFalse", 2);
         }
         #endregion
@@ -305,15 +307,24 @@ public class DragShoot : MonoBehaviour
 
     void GoodFalse()
     {
-        good.gameObject.SetActive(false);
+        good.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() =>
+        {
+            good.gameObject.SetActive(false);
+        });
     }
     void AmazingFalse()
     {
-        amazing.gameObject.SetActive(false);
+        amazing.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() =>
+        {
+            amazing.gameObject.SetActive(false);
+        });
     }
     void PerfectFalse()
     {
-        perfect.gameObject.SetActive(false);
+        perfect.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() =>
+        {
+            perfect.gameObject.SetActive(false);
+        });
     }
     #endregion
 }

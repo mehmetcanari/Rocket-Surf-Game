@@ -1,0 +1,41 @@
+fileFormatVersion: 2
+guid: fada12a195f06fd4abc873ff474508a6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - White1buildingFracturedPre: {instanceID: 0}
+  - White2buildingFracturedPre: {instanceID: 0}
+  - White3buildingFracturedPre: {instanceID: 0}
+  - WhitetownhallFracturedPre: {instanceID: 0}
+  - FiskiyeFracturedPre: {instanceID: 0}
+  - Orange1buildingFracturedPre: {fileID: 457816031192382545, guid: acba95a60ecbb7a4eabd135710fe2d80,
+      type: 3}
+  - Orange2buildingFracturedPre: {fileID: 919132149155446097, guid: 2df6a7b0533aa244698a30cacc7ba87d,
+      type: 3}
+  - Orange3buildingFracturedPre: {fileID: 7012758023673288463, guid: 41055c27ce0a71142a5de3f65f9ced54,
+      type: 3}
+  - OrangetownhallFracturedPre: {fileID: 4201953432057111407, guid: 9dfce75ed5bd41a4695a6f7a9fe772ac,
+      type: 3}
+  - Purple1buildingFracturedPre: {fileID: 6885922263303867073, guid: 60bf81a9bb696944f8d1a7f7d85bbbf1,
+      type: 3}
+  - Purple2buildingFracturedPre: {fileID: 8516155218789463682, guid: 97717b11de34e7b49b672a1bfcd6aac5,
+      type: 3}
+  - Purple3buildingFracturedPre: {fileID: 786868349054314844, guid: 1eb3dd59ee1644c48b5de7ed45f3d4b4,
+      type: 3}
+  - PurpletownhallFracturedPre: {fileID: 5539834448919503372, guid: eaa1c4ab701a2bb4ba14f930958a3259,
+      type: 3}
+  - Blue1buildingFracturedPre: {fileID: 5142168345206637935, guid: 881d0f27f4e4d784da3e66f95f315ee3,
+      type: 3}
+  - Blue2buildingFracturedPre: {fileID: 1104747815023706505, guid: b7e7f28d6266874408645d7597dd7c4e,
+      type: 3}
+  - Blue3buildingFracturedPre: {fileID: 7250172763593069086, guid: 9189545954510004f8bf2b5d00a5265d,
+      type: 3}
+  - BluetownhallFracturedPre: {fileID: 9181178105754334378, guid: d95ce96f14a224f48a0dd816a9e25b90,
+      type: 3}
+  - fire: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

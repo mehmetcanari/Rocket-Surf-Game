@@ -102,6 +102,8 @@ MonoBehaviour:
     type: 3}
   WhitetownhallFracturedPre: {fileID: 3149979786997534821, guid: 1ffbce5b52e5a2d48b345685c7160fb4,
     type: 3}
+  FiskiyeFracturedPre: {fileID: 1054521798451362937, guid: dc17b23be04c83e4ba28cd35d0566850,
+    type: 3}
   Orange1buildingFracturedPre: {fileID: 457816031192382545, guid: acba95a60ecbb7a4eabd135710fe2d80,
     type: 3}
   Orange2buildingFracturedPre: {fileID: 197898194035066272, guid: 0a06c0c20fe819442b491992bcb12b5f,
@@ -126,7 +128,6 @@ MonoBehaviour:
     type: 3}
   BluetownhallFracturedPre: {fileID: 9181178105754334378, guid: d95ce96f14a224f48a0dd816a9e25b90,
     type: 3}
-  fire: {fileID: 6275263824981838179, guid: 5716b1406c17751429005dade7cd239b, type: 3}
 --- !u!54 &-997015838672253390
 Rigidbody:
   m_ObjectHideFlags: 0

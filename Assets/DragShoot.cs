@@ -9,14 +9,15 @@ public class DragShoot : MonoBehaviour
 {
     Vector3 mousePressDownPos;
     Vector3 mouseReleasePos;
+
+    Vector2 m_stableDeltaPos;
     Vector2 m_startPos;
     Vector2 m_deltaPos;
-    
+
     public bool isEnded = false;
     bool useFuel = false;
     bool timerBool = false;
     bool shot = false;
-    bool isRotating = false;
     bool isStarted = false;
 
     public State currentState;
@@ -25,6 +26,7 @@ public class DragShoot : MonoBehaviour
     public ParticleSystem rocketFire;
     public ParticleSystem crashExplosion;
     public ParticleSystem fuelExp;
+    public ParticleSystem speedParticle;
     public TrailRenderer[] rocketTrails;
 
     public float forceMultiplier;
@@ -38,6 +40,7 @@ public class DragShoot : MonoBehaviour
     float timer = 2;
     float useFuelMult;
     float roll;
+    float rotate;
     public int scoreCount = 1;
 
     public Image fuelBar;
@@ -124,10 +127,10 @@ public class DragShoot : MonoBehaviour
                 currentState = State.Fly;
             }
         }
-        
+
         if (useFuel)
         {
-            fuel -= 0.1f * (useFuelMult / 100);
+            fuel -= 0.2f * (useFuelMult / 100);
         }
 
         if (currentState == State.Fly)
@@ -142,34 +145,30 @@ public class DragShoot : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 m_startPos = Input.mousePosition;
                 useFuel = false;
+                m_stableDeltaPos = Input.mousePosition;
             }
             if (Input.GetMouseButton(0))
-            {   
-                if (!isRotating)
-                {
-                    transform.DOLocalRotate(new Vector3(-60, 0, roll), 0.5f); //Up force
-                }
+            {
+
+                transform.DOLocalRotate(new Vector3(-60, rotate, roll), 0.5f); //Up force
 
                 m_deltaPos = (Vector2)Input.mousePosition - m_startPos;
-                fuel -= 0.1f;
+                fuel -= 0.2f;
 
                 if (Mathf.Abs(m_deltaPos.x) > Screen.width * swipeGap) // If slide 
                 {
                     if (m_deltaPos.x > 0) //Delta X Positive
                     {
-                        isRotating = true;
-                        transform.DOLocalRotate(new Vector3(-60, 60, 0), 0.5f);
+                        rotate = 60;
                     }
-
                     if (m_deltaPos.x < 0) //Delta X Negative
                     {
-                        isRotating = true;
-                        transform.DOLocalRotate(new Vector3(-60, -60, 0), 0.5f);
+                        rotate = -60;
                     }
                 }
-                else
+                if (m_startPos.x == m_stableDeltaPos.x)
                 {
-                    isRotating = false;
+                    rotate = 0;
                 }
                 m_startPos = Input.mousePosition;
 
@@ -194,7 +193,7 @@ public class DragShoot : MonoBehaviour
 
             fallSpeed += 20 * Time.deltaTime;
             Debug.Log(fallSpeed);
-            
+
             if (Input.GetMouseButton(0) && fuel > 0)
             {
                 currentState = State.Fly;
@@ -207,22 +206,28 @@ public class DragShoot : MonoBehaviour
         {
             currentState = State.Fall;
         }
-
+        if (fuel > startFuel)
+        {
+            fuel = startFuel;
+        }
         fuelBar.fillAmount = fuel / startFuel;
         #endregion
 
         #region Rewards
-        if (transform.position.z > 370)
+        if (transform.position.z > 370 && transform.position.z < 375)
         {
             good.gameObject.SetActive(true);
+            Invoke("GoodFalse", 2);
         }
-        if (transform.position.z > 370)
+        if (transform.position.z > 880 && transform.position.z < 885)
         {
             amazing.gameObject.SetActive(true);
+            Invoke("AmazingFalse", 2);
         }
-        if (transform.position.z > 370)
+        if (transform.position.z > 1385 && transform.position.z < 1390)
         {
             perfect.gameObject.SetActive(true);
+            Invoke("PerfectFalse", 2);
         }
         #endregion
     }
@@ -261,11 +266,13 @@ public class DragShoot : MonoBehaviour
 
             usedSpeed = speed * 2;
             roll = 250;
+            speedParticle.gameObject.SetActive(true);
             transform.DORotate(new Vector3(0, 0, 250), 2f).OnComplete(() =>
             {
                 transform.DORotate(new Vector3(60, 0, 0), 1.2f);
                 roll = 0;
                 usedSpeed = speed;
+                speedParticle.gameObject.SetActive(false);
             });
         }
         if (other.gameObject.tag != "Fuel" && other.gameObject.tag != "Ring")
@@ -294,6 +301,19 @@ public class DragShoot : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(0);
+    }
+
+    void GoodFalse()
+    {
+        good.gameObject.SetActive(false);
+    }
+    void AmazingFalse()
+    {
+        amazing.gameObject.SetActive(false);
+    }
+    void PerfectFalse()
+    {
+        perfect.gameObject.SetActive(false);
     }
     #endregion
 }

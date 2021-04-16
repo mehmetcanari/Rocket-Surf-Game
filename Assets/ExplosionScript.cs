@@ -50,17 +50,16 @@ public class ExplosionScript : MonoBehaviour
     GameObject Blue2buildingFractured;
     GameObject Blue3buildingFractured;
     GameObject BluetownhallFractured;
-
-    public GameObject fire;
     private void Start()
     {
+        transform.localScale = new Vector3(0, 0, 0);
         scoreCounter = GameObject.FindGameObjectWithTag("ScoreCounter");
     }
     void Update()
     {
         transform.localScale += new Vector3(5f, 5f, 5f);
         GetComponent<MeshRenderer>().enabled = false;
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 1f);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -132,7 +131,7 @@ public class ExplosionScript : MonoBehaviour
         {
             Destroy(other.gameObject);
             FiskiyeFractured = Instantiate(FiskiyeFracturedPre, other.transform.position, Quaternion.identity);
-            FiskiyeFractured.transform.localScale = other.gameObject.transform.localScale;
+            FiskiyeFractured.transform.localScale = other.gameObject.transform.localScale / 10;
             scoreCounter.GetComponent<ScoreCounter>().score += 80;
         }
         #endregion
@@ -195,10 +194,6 @@ public class ExplosionScript : MonoBehaviour
             BluetownhallFractured.transform.localScale = other.gameObject.transform.localScale;
             scoreCounter.GetComponent<ScoreCounter>().score += 400;
         }
-        //if (other.gameObject.tag == "Fire")
-        //{
-        //    Instantiate(fire, other.transform.position, Quaternion.identity);
-        //}
     }
     #endregion
   

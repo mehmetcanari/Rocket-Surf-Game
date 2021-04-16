@@ -17,8 +17,12 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        transform.position = target.position + offset;
-        
+        if (ds.currentState != DragShoot.State.Crash)
+        {
+            transform.position = target.position + offset;
+            transform.LookAt(target);
+        }
+
         if (ds.currentState == DragShoot.State.Fly)
         {
             offset = Vector3.Lerp(offset, new Vector3(0, 50, -150), 0.2f);
@@ -27,17 +31,14 @@ public class CameraFollow : MonoBehaviour
         if (ds.currentState == DragShoot.State.Crash)
         {
             sc.CalculateScore();
-                      
-            if (ds.isEnded)
-            {
-                //transform.DOShakePosition(3, 2, 5, 70, true);
-                transform.DORotate(new Vector3(30, 0, 0), 1);
-                transform.DOMoveY(transform.position.y + 70, 1);
-                transform.DOMoveZ(transform.position.z - 70, 1);
-                ds.isEnded = false;
-            }
-
         }
-        transform.LookAt(target);
+        if (ds.isEnded)
+        {
+            //transform.DOShakePosition(3, 2, 5, 70, true);
+            transform.DORotate(new Vector3(30, 0, 0), 1);
+            transform.DOMoveY(transform.position.y + 70, 1);
+            transform.DOMoveZ(transform.position.z - 70, 1);
+            ds.isEnded = false;
+        }
     }
 }

@@ -72,6 +72,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             White1buildingFractured = Instantiate(White1buildingFracturedPre, other.transform.position, Quaternion.identity);
             White1buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            White2buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 10;
         }
         if (other.gameObject.tag == "White2building")
@@ -79,6 +80,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             White2buildingFractured = Instantiate(White2buildingFracturedPre, other.transform.position, Quaternion.identity);
             White2buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            White2buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 5;
         }
         if (other.gameObject.tag == "White3building")
@@ -86,6 +88,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             White3buildingFractured = Instantiate(White3buildingFracturedPre, other.transform.position, Quaternion.identity);
             White3buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            White3buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 25;
         }
         if (other.gameObject.tag == "Whitetownhall")
@@ -93,6 +96,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             WhitetownhallFractured = Instantiate(WhitetownhallFracturedPre, other.transform.position, Quaternion.identity);
             WhitetownhallFractured.transform.localScale = other.gameObject.transform.localScale;
+            WhitetownhallFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 50;
         }
         #region OrangeBuildings
@@ -101,6 +105,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             Orange1buildingFractured = Instantiate(Orange1buildingFracturedPre, other.transform.position, Quaternion.identity);
             Orange1buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            Orange1buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 20;
         }
         if (other.gameObject.tag == "Orange2building")
@@ -108,6 +113,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             Orange2buildingFractured = Instantiate(Orange2buildingFracturedPre, other.transform.position, Quaternion.identity);
             Orange2buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            Orange2buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 10;
         }
         if (other.gameObject.tag == "Orange3building")
@@ -115,6 +121,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             Orange3buildingFractured = Instantiate(Orange3buildingFracturedPre, other.transform.position, Quaternion.identity);
             Orange3buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            Orange3buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 50;
         }
         if (other.gameObject.tag == "Orangetownhall")
@@ -122,6 +129,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             OrangetownhallFractured = Instantiate(OrangetownhallFracturedPre, other.transform.position, Quaternion.identity);
             OrangetownhallFractured.transform.localScale = other.gameObject.transform.localScale;
+            OrangetownhallFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 100;
         }
         #endregion
@@ -140,6 +148,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             Purple1buildingFractured = Instantiate(Purple1buildingFracturedPre, other.transform.position, Quaternion.identity);
             Purple1buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            Purple1buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 40;
         }
         if (other.gameObject.tag == "Purple2building")
@@ -147,6 +156,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             Purple2buildingFractured = Instantiate(Purple2buildingFracturedPre, other.transform.position, Quaternion.identity);
             Purple2buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            Purple2buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 20;
         }
         if (other.gameObject.tag == "Purple3building")
@@ -154,6 +164,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             Purple3buildingFractured = Instantiate(Purple3buildingFracturedPre, other.transform.position, Quaternion.identity);
             Purple3buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            Purple3buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 100;
         }
         if (other.gameObject.tag == "Purpletownhall")
@@ -161,6 +172,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             PurpletownhallFractured = Instantiate(PurpletownhallFracturedPre, other.transform.position, Quaternion.identity);
             PurpletownhallFractured.transform.localScale = other.gameObject.transform.localScale;
+            PurpletownhallFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 200;
         }
         #endregion
@@ -170,6 +182,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             Blue1buildingFractured = Instantiate(Blue1buildingFracturedPre, other.transform.position, Quaternion.identity);
             Blue1buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            Blue1buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 80;
         }
         if (other.gameObject.tag == "Blue2building")
@@ -177,6 +190,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             Blue2buildingFractured = Instantiate(Blue2buildingFracturedPre, other.transform.position, Quaternion.identity);
             Blue2buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            Blue2buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 40;
         }
         if (other.gameObject.tag == "Blue3building")
@@ -184,6 +198,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             Blue3buildingFractured = Instantiate(Blue3buildingFracturedPre, other.transform.position, Quaternion.identity);
             Blue3buildingFractured.transform.localScale = other.gameObject.transform.localScale;
+            Blue3buildingFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 200;
         }
         if (other.gameObject.tag == "Bluetownhall")
@@ -191,6 +206,7 @@ public class ExplosionScript : MonoBehaviour
             Destroy(other.gameObject);
             BluetownhallFractured = Instantiate(BluetownhallFracturedPre, other.transform.position, Quaternion.identity);
             BluetownhallFractured.transform.localScale = other.gameObject.transform.localScale;
+            BluetownhallFractured.transform.rotation = other.transform.rotation;
             scoreCounter.GetComponent<ScoreCounter>().score += 400;
         }
     }

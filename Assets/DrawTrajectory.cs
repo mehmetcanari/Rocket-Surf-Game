@@ -25,7 +25,7 @@ public class DrawTrajectory : MonoBehaviour
         Debug.Log("Çiz");
         Vector3 velocity = (forceVector / rib.mass) * Time.fixedDeltaTime;
 
-        float FlightDuration = (500 * velocity.y) / Physics.gravity.y;
+        float FlightDuration = (350 * velocity.y) / Physics.gravity.y;
 
         float stepTime = FlightDuration / lrCount;
 

@@ -20,7 +20,7 @@ public class DragShoot : MonoBehaviour
     bool shot = false;
     bool isStarted = false;
     bool explosionTimer = false;
-    bool firstShot = false;
+    bool forward = false;
 
     public CityColliders cc;
     public State currentState;
@@ -41,14 +41,17 @@ public class DragShoot : MonoBehaviour
     public float swipeGap;
     public float startFuel = 200;
     public float speed;
-    private float fallSpeed = 75;
-    float fuel;
     public float rocketForwardSpeed;
+    private float fallSpeed = 75;
+    float startingXPos;
+    float fuel;
     float timer = 2;
     private float crashTimer = 2;
     float useFuelMult;
     float roll;
     float rotate;
+    float speedSwitch = 1;
+    float slingRotate = -90;
     public int scoreCount = 1;
 
     public Image fuelBar;
@@ -81,6 +84,7 @@ public class DragShoot : MonoBehaviour
         rocketTrails = GetComponentsInChildren<TrailRenderer>();
         rocketForwardSpeed = speed;
         fuel = startFuel;
+        startingXPos = transform.position.x;
     }
     private void Update()
     {
@@ -96,13 +100,12 @@ public class DragShoot : MonoBehaviour
         {
             frictionParticle.gameObject.SetActive(true);
             crashTimer -= Time.deltaTime;
-            //Debug.Log(crashTimer);
         }
 
         if (crashTimer <= 0)
         {
             frictionParticle.gameObject.SetActive(false);
-            Instantiate(crashSmoke, transform.position , Quaternion.identity);
+            Instantiate(crashSmoke, transform.position, Quaternion.identity);
             crashSmoke.transform.position = gameObject.transform.position;
             currentState = State.Crash;
             Instantiate(explosion, transform.position, Quaternion.identity);
@@ -117,7 +120,6 @@ public class DragShoot : MonoBehaviour
         if (timerBool)
         {
             timer -= Time.deltaTime;
-            //Debug.Log(timer);
         }
 
         if (timer <= 0)
@@ -156,10 +158,8 @@ public class DragShoot : MonoBehaviour
 
                 if (!shot)
                 {
-                    DrawTrajectory.Instance.UpdateTrajectory(forceV, rb, transform.position);
+                    DrawTrajectory.Instance.UpdateTrajectory(forceV, rb, new Vector3(transform.position.x, transform.position.y, transform.position.z + 200));
                 }
-
-               
             }
             if (Input.GetMouseButtonUp(0) && !isStarted) //Trajectory Shoot
             {
@@ -168,8 +168,8 @@ public class DragShoot : MonoBehaviour
                 Shoot(mousePressDownPos - mouseReleasePos);
                 useFuel = true;
                 isStarted = true;
-                Debug.Log(isStarted);
             }
+
             if (transform.position.y > 18)
             {
                 currentState = State.Fly;
@@ -186,7 +186,28 @@ public class DragShoot : MonoBehaviour
         if (currentState == State.Fly)
         {
             rocketFire.gameObject.SetActive(true);
-            transform.Translate(Vector3.forward * rocketForwardSpeed * Time.deltaTime);
+
+            if (!forward) // Left & right rotation in sling shot 
+            {
+                float rotateRate = (transform.position.x - startingXPos) / 4.5f;
+                slingRotate = Mathf.Lerp(slingRotate, 60, 0.004f);
+
+                if (transform.position.x < startingXPos)
+                {
+                    Debug.LogWarning("dönüş");
+                    transform.DOLocalRotate(new Vector3(slingRotate, rotateRate, 0), 0f);
+                }
+                if (transform.position.x > startingXPos)
+                {
+                    Debug.LogWarning("dönüş");
+                    transform.DOLocalRotate(new Vector3(slingRotate, rotateRate, 0), 0f);
+                }
+            }
+            if (forward)
+            {
+                speedSwitch = Mathf.Lerp(speedSwitch, 1, 0.05f);
+                transform.Translate(Vector3.forward * rocketForwardSpeed * speedSwitch * Time.deltaTime);
+            }
             rb.constraints = RigidbodyConstraints.None;
 
             #region Swerve
@@ -196,6 +217,7 @@ public class DragShoot : MonoBehaviour
                 rb.velocity = Vector3.zero;
                 m_startPos = Input.mousePosition;
                 useFuel = false;
+                forward = true;
                 m_stableDeltaPos = Input.mousePosition;
             }
 
@@ -204,44 +226,44 @@ public class DragShoot : MonoBehaviour
                 transform.DOLocalRotate(new Vector3(-60, rotate, roll), 0.5f); //Up force
                 m_deltaPos = (Vector2)Input.mousePosition - m_startPos;
                 fuel -= 0.2f;
-                
-                
-                //Swerve Input
-                // transform.position =
-                //new Vector3(Mathf.Lerp(transform.position.x, transform.position.x + (m_deltaPos.x / Screen.width) * swerveSpeed, Time.deltaTime * moveSmoother)
-                //, transform.position.y, transform.position.z);
 
-                // if (m_deltaPos.x > 0 )
-                // {
-                //     transform.DORotate(new Vector3(0, 0, -45), 0.5f);
-                //     transform.DOLocalRotate(new Vector3(0, 30, 0), 0.5f);
-                // }
-                // if (m_deltaPos.x < 0)
-                // {
-                //     transform.DORotate(new Vector3(0, 0, 45), 0.5f);
-                //     transform.DOLocalRotate(new Vector3(0, -30, 0), 0.5f);
-                // }
-                // else
-                // {
-                //     transform.DORotate(Vector3.zero, 0.5f);
-                // }
+
+                //Swerve Input
+                transform.position =
+               new Vector3(Mathf.Lerp(transform.position.x, transform.position.x + (m_deltaPos.x / Screen.width) * swerveSpeed, Time.deltaTime * moveSmoother)
+               , transform.position.y, transform.position.z);
+
+                if (m_deltaPos.x > 0)
+                {
+                    transform.DORotate(new Vector3(0, 0, -60), 0.5f);
+                    transform.DOLocalRotate(new Vector3(0, 30, 0), 0.5f);
+                }
+                if (m_deltaPos.x < 0)
+                {
+                    transform.DORotate(new Vector3(0, 0, 60), 0.5f);
+                    transform.DOLocalRotate(new Vector3(0, -30, 0), 0.5f);
+                }
+                else
+                {
+                    //transform.DORotate(Vector3.zero, 0.5f);
+                }
 
                 //Local Rotate Input
-                if (Mathf.Abs(m_deltaPos.x) > Screen.width * swipeGap) // If slide 
-                {
-                    if (m_deltaPos.x > 0) //Delta X Positive
-                    {
-                        rotate = 60;
-                    }
-                    if (m_deltaPos.x < 0) //Delta X Negative
-                    {
-                        rotate = -60;
-                    }
-                }
-                if (m_startPos.x == m_stableDeltaPos.x)
-                {
-                    rotate = 0;
-                }
+                //if (Mathf.Abs(m_deltaPos.x) > Screen.width * swipeGap) // If slide 
+                //{
+                //    if (m_deltaPos.x > 0) //Delta X Positive
+                //    {
+                //        rotate = 60;
+                //    }
+                //    if (m_deltaPos.x < 0) //Delta X Negative
+                //    {
+                //        rotate = -60;
+                //    }
+                //}
+                //if (m_startPos.x == m_stableDeltaPos.x)
+                //{
+                //    rotate = 0;
+                //}
                 m_startPos = Input.mousePosition;
 
 
@@ -274,7 +296,6 @@ public class DragShoot : MonoBehaviour
             rb.velocity = Vector3.zero;
 
             fallSpeed += 20 * Time.deltaTime;
-            Debug.Log(fallSpeed);
 
             if (Input.GetMouseButton(0) && fuel > 0)
             {
@@ -301,13 +322,13 @@ public class DragShoot : MonoBehaviour
         if (transform.position.z > 370 && transform.position.z < 375)
         {
             good.gameObject.SetActive(true);
-            good.transform.DOScale(new Vector3(5,1.5f,5),0.5f);
+            good.transform.DOScale(new Vector3(5, 1.5f, 5), 0.5f);
             Invoke("GoodFalse", 2);
         }
         if (transform.position.z > 880 && transform.position.z < 885)
         {
             amazing.gameObject.SetActive(true);
-            amazing.transform.DOScale(new Vector3(5, 1.5f, 5),0.5f);
+            amazing.transform.DOScale(new Vector3(5, 1.5f, 5), 0.5f);
             Invoke("AmazingFalse", 2);
         }
         if (transform.position.z > 1385 && transform.position.z < 1390)
@@ -323,9 +344,9 @@ public class DragShoot : MonoBehaviour
         if (shot)
             return;
 
-        Debug.Log("Shoot");
         useFuelMult = Force.y;
         rb.AddForce(new Vector3(Force.x, Force.y, Force.y) * forceMultiplier, ForceMode.Impulse);
+        speedSwitch = (Force.y * forceMultiplier) / 20;
         currentState = State.Fly;
         rb.useGravity = false;
         shot = true;
@@ -360,7 +381,7 @@ public class DragShoot : MonoBehaviour
             {
                 transform.DORotate(new Vector3(60, 0, 0), 1.2f);
                 roll = 0;
-                
+
                 rocketForwardSpeed = Mathf.Lerp(speed, rocketForwardSpeed, 0.7f);
                 speedParticle.gameObject.SetActive(false);
             });

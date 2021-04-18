@@ -60,6 +60,8 @@ public class DragShoot : MonoBehaviour
     public Image amazing;
     public Image perfect;
 
+    GameObject[] pointImages;
+
     public enum State
     {
         Idle,
@@ -69,6 +71,7 @@ public class DragShoot : MonoBehaviour
     }
     void Start()
     {
+        pointImages = GameObject.FindGameObjectsWithTag("PointImage");
         foreach (var item in cc.cities)
         {
             item.gameObject.GetComponent<MeshRenderer>().receiveShadows = false;
@@ -390,6 +393,10 @@ public class DragShoot : MonoBehaviour
         {
             //Sets the explosion countdown while rocket breaking the buildings
             explosionTimer = true;
+            foreach (var image in pointImages)
+            {
+                image.SetActive(false);
+            }
 
             #region White Building Pre Explosion
             if (other.gameObject.tag == "White1building")
@@ -405,6 +412,12 @@ public class DragShoot : MonoBehaviour
                 currentState = State.Fall;
             }
             else if (other.gameObject.tag == "White3building")
+            {
+                Instantiate(explosion, transform.position, Quaternion.identity);
+                explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
+                currentState = State.Fall;
+            }
+            else if (other.gameObject.tag == "Whitetownhall")
             {
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
@@ -431,6 +444,12 @@ public class DragShoot : MonoBehaviour
                 explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
                 currentState = State.Fall;
             }
+            else if (other.gameObject.tag == "Orangetownhall")
+            {
+                Instantiate(explosion, transform.position, Quaternion.identity);
+                explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
+                currentState = State.Fall;
+            }
             #endregion
 
             #region Blue Building Pre Explosion
@@ -447,6 +466,12 @@ public class DragShoot : MonoBehaviour
                 currentState = State.Fall;
             }
             else if (other.gameObject.tag == "Blue3building")
+            {
+                Instantiate(explosion, transform.position, Quaternion.identity);
+                explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
+                currentState = State.Fall;
+            }
+            else if (other.gameObject.tag == "Bluetownhall")
             {
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
@@ -473,6 +498,12 @@ public class DragShoot : MonoBehaviour
                 explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
                 currentState = State.Fall;
             }
+            else if (other.gameObject.tag == "Purpletownhall")
+            {
+                Instantiate(explosion, transform.position, Quaternion.identity);
+                explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
+                currentState = State.Fall;
+            }
             #endregion
         }
     }
@@ -480,6 +511,10 @@ public class DragShoot : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         explosionTimer = true;
+        foreach (var image in pointImages)
+        {
+            image.SetActive(false);
+        }
         transform.DORotate(Vector3.zero, 0.5f);
     }
     #endregion

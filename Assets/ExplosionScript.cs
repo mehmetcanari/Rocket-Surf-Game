@@ -63,7 +63,6 @@ public class ExplosionScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.gameObject.tag == "PointImage")
         {
             Destroy(other.gameObject);

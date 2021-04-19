@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 
-public class DragShoot : MonoBehaviour
+public class RocketController : MonoBehaviour
 {
     private Vector3 mousePressDownPos;
     private Vector3 mouseReleasePos;
@@ -21,21 +21,26 @@ public class DragShoot : MonoBehaviour
     private bool isStarted = false;
     private bool explosionTimer = false;
     private bool forward = false;
+    private bool tutorialStop = true;
 
     public State currentState;
     public CityColliders cc;
     public Rigidbody rb;
     public GameObject explosion;
+    public GameObject[] pointImages;
+    public TrailRenderer[] rocketTrails;
+    
+    [Header("Particles")]
     public ParticleSystem rocketFire;
     public ParticleSystem crashExplosion;
     public ParticleSystem fuelExp;
     public ParticleSystem speedParticle;
     public ParticleSystem frictionParticle;
     public ParticleSystem crashSmoke;
-    public GameObject[] pointImages;
-    public TrailRenderer[] rocketTrails;
+    public ParticleSystem ringDestroyParticle;
 
-    public int scoreCount = 1;
+
+    [Header("Rocket Movement")]
     public float forceMultiplier;
     public float moveSmoother;
     public float swerveSpeed;
@@ -44,11 +49,13 @@ public class DragShoot : MonoBehaviour
     public float startFuel = 200;
     public float speed;
     public float rocketForwardSpeed;
+
+    public int scoreCount = 1;
     private float fallSpeed = 75;
     private float startingXPos;
     private float fuel;
     private float timer = 2;
-    private float crashTimer = 2;
+    private float crashTimer = 0.5f;
     private float useFuelMult;
     private float roll;
     private float rotate;
@@ -71,6 +78,8 @@ public class DragShoot : MonoBehaviour
     }
     void Start()
     {
+        #region Start Arguments
+        tutorialStop = true;
         pointImages = GameObject.FindGameObjectsWithTag("PointImage");
         foreach (var item in cc.cities)
         {
@@ -88,9 +97,24 @@ public class DragShoot : MonoBehaviour
         rocketForwardSpeed = speed;
         fuel = startFuel;
         startingXPos = transform.position.x;
+        #endregion
     }
     private void Update()
     {
+        #region Tutorial
+        if (gameObject.transform.position.y >= 180 && tutorialStop)
+        {
+            Time.timeScale = 0f;
+            
+            if (Input.GetMouseButtonDown(0))
+            {
+                tutorialStop = false;
+                Time.timeScale = 1f;
+                //Tutorial UI setactives here.
+            }
+        }
+        #endregion
+
         #region Reset Input
         if (Input.GetKey(KeyCode.R))
         {
@@ -197,12 +221,12 @@ public class DragShoot : MonoBehaviour
 
                 if (transform.position.x < startingXPos)
                 {
-                    Debug.LogWarning("dönüş");
+                    //Debug.LogWarning("Return");
                     transform.DOLocalRotate(new Vector3(slingRotate, rotateRate, 0), 0f);
                 }
                 if (transform.position.x > startingXPos)
                 {
-                    Debug.LogWarning("dönüş");
+                    //Debug.LogWarning("Return");
                     transform.DOLocalRotate(new Vector3(slingRotate, rotateRate, 0), 0f);
                 }
             }
@@ -214,75 +238,105 @@ public class DragShoot : MonoBehaviour
             rb.constraints = RigidbodyConstraints.None;
 
             #region Swerve
-            if (Input.GetMouseButtonDown(0))
+            if (!tutorialStop) // If the tutorial appear, game will stop
             {
-                shot = false;
-                rb.velocity = Vector3.zero;
-                m_startPos = Input.mousePosition;
-                useFuel = false;
-                forward = true;
-                m_stableDeltaPos = Input.mousePosition;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    shot = false;
+                    rb.velocity = Vector3.zero;
+                    m_startPos = Input.mousePosition;
+                    useFuel = false;
+                    forward = true;
+                    m_stableDeltaPos = Input.mousePosition;
+
+                    //rocketForwardSpeed += 50;
+
+                    rocketForwardSpeed = Mathf.Lerp(rocketForwardSpeed, rocketForwardSpeed + 50, 0.7f);
+                }
+
+                if (Input.GetMouseButton(0))
+                {
+                    transform.DOLocalRotate(new Vector3(-60, rotate, roll), 0.5f); //Up force
+                    m_deltaPos = (Vector2)Input.mousePosition - m_startPos;
+                    fuel -= 0.2f;
+
+                    foreach (var item in rocketTrails)
+                    {
+                        item.gameObject.GetComponent<TrailRenderer>().time =
+                            Mathf.Lerp(item.gameObject.GetComponent<TrailRenderer>().time, 1, 1f);
+                    }
+
+
+                    //Swerve Input
+                    transform.position =
+                   new Vector3(Mathf.Lerp(transform.position.x, transform.position.x + (m_deltaPos.x / Screen.width) * swerveSpeed, Time.deltaTime * moveSmoother)
+                   , transform.position.y, transform.position.z);
+
+                    if (Mathf.Abs(m_deltaPos.x) > Screen.width * swipeGap)
+                    {
+
+                        if (m_deltaPos.x > 0)
+                        {
+                            transform.DORotate(new Vector3(0, 0, -60), 0.5f);
+                            //transform.DOLocalRotate(new Vector3(0, 30, 0), 0.5f);
+                            transform.Rotate(new Vector3(0, 30 * Time.deltaTime, 0));
+                        }
+
+                        if (m_deltaPos.x < 0)
+                        {
+                            transform.DORotate(new Vector3(0, 0, 60), 0.5f);
+                            //transform.DOLocalRotate(new Vector3(0, -30, 0), 0.5f);
+                            transform.Rotate(new Vector3(0, -30 * Time.deltaTime, 0));
+                        }
+                    }
+
+                    if (m_startPos.x == m_stableDeltaPos.x)
+                    {
+                        rotate = 0;
+                    }
+
+                    //Local Rotate Input
+                    //if (Mathf.Abs(m_deltaPos.x) > Screen.width * swipeGap) // If slide 
+                    //{
+                    //    if (m_deltaPos.x > 0) //Delta X Positive
+                    //    {
+                    //        rotate = 60;
+                    //    }
+                    //    if (m_deltaPos.x < 0) //Delta X Negative
+                    //    {
+                    //        rotate = -60;
+                    //    }
+                    //}
+                    //if (m_startPos.x == m_stableDeltaPos.x)
+                    //{
+                    //    rotate = 0;
+                    //}
+                    m_startPos = Input.mousePosition;
+
+
+                }
+                if (Input.GetMouseButtonUp(0))
+                {
+                    if (shot)
+                    {
+                        transform.DOLocalRotate(new Vector3(0, 0, 0), 1f);
+                    }
+
+                    else if (!shot)
+                    {
+                        transform.DOLocalRotate(new Vector3(60, 0, 0), 1f);
+
+                        foreach (var item in rocketTrails)
+                        {
+                            item.gameObject.GetComponent<TrailRenderer>().time =
+                              Mathf.Lerp(item.gameObject.GetComponent<TrailRenderer>().time, 0, 1f);
+                        }
+                        //rocketForwardSpeed -= 50;
+                        rocketForwardSpeed = Mathf.Lerp(rocketForwardSpeed, rocketForwardSpeed - 50, 0.7f);
+                    }
+                }
             }
-
-            if (Input.GetMouseButton(0))
-            {
-                transform.DOLocalRotate(new Vector3(-60, rotate, roll), 0.5f); //Up force
-                m_deltaPos = (Vector2)Input.mousePosition - m_startPos;
-                fuel -= 0.2f;
-
-
-                //Swerve Input
-                transform.position =
-               new Vector3(Mathf.Lerp(transform.position.x, transform.position.x + (m_deltaPos.x / Screen.width) * swerveSpeed, Time.deltaTime * moveSmoother)
-               , transform.position.y, transform.position.z);
-
-                if (m_deltaPos.x > 0)
-                {
-                    transform.DORotate(new Vector3(0, 0, -60), 0.5f);
-                    transform.DOLocalRotate(new Vector3(0, 30, 0), 0.5f);
-                }
-                else if (m_deltaPos.x < 0)
-                {
-                    transform.DORotate(new Vector3(0, 0, 60), 0.5f);
-                    transform.DOLocalRotate(new Vector3(0, -30, 0), 0.5f);
-                }
-                if (m_startPos.x == m_stableDeltaPos.x)
-                {
-                    rotate = 0;
-                }
-
-                //Local Rotate Input
-                //if (Mathf.Abs(m_deltaPos.x) > Screen.width * swipeGap) // If slide 
-                //{
-                //    if (m_deltaPos.x > 0) //Delta X Positive
-                //    {
-                //        rotate = 60;
-                //    }
-                //    if (m_deltaPos.x < 0) //Delta X Negative
-                //    {
-                //        rotate = -60;
-                //    }
-                //}
-                //if (m_startPos.x == m_stableDeltaPos.x)
-                //{
-                //    rotate = 0;
-                //}
-                m_startPos = Input.mousePosition;
-
-
-            }
-            if (Input.GetMouseButtonUp(0))
-            {
-                if (shot)
-                {
-                    transform.DOLocalRotate(new Vector3(0, 0, 0), 1f);
-                }
-
-                else if (!shot)
-                {
-                    transform.DOLocalRotate(new Vector3(60, 0, 0), 1f);
-                }
-            }
+            
             #endregion
         }
         else
@@ -503,7 +557,17 @@ public class DragShoot : MonoBehaviour
         {
             image.SetActive(false);
         }
-        transform.DORotate(Vector3.zero, 0.5f);
+        transform.DORotate(Vector3.zero, 0.2f);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Ring")
+        {
+            //Debug.LogError("Ring Out");
+            Destroy(other.gameObject,0.5f);
+            Instantiate(ringDestroyParticle, other.gameObject.transform.position, Quaternion.identity);
+        }
     }
     #endregion
 
@@ -513,7 +577,7 @@ public class DragShoot : MonoBehaviour
         if (shot)
             return;
 
-        useFuelMult = Force.y;
+        //useFuelMult = Force.y;
         rb.AddForce(new Vector3(Force.x, Force.y, Force.y) * forceMultiplier, ForceMode.Impulse);
         speedSwitch = (Force.y * forceMultiplier) / 20;
         currentState = State.Fly;

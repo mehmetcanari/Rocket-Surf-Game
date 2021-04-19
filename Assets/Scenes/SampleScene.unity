@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -31248,7 +31248,7 @@ MonoBehaviour:
   offset: {x: 0, y: 50, z: -150}
   sc: {fileID: 1025465373}
   target: {fileID: 1745811710}
-  ds: {fileID: 1745811707}
+  rc: {fileID: 1745811707}
 --- !u!1 &965254084 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a34793633b1d274bb11425bc2f796ec,
@@ -55687,22 +55687,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnded: 0
-  cc: {fileID: 518268458}
   currentState: 0
+  cc: {fileID: 518268458}
   rb: {fileID: 1745811706}
   explosion: {fileID: 8639485626561835113, guid: e04b45055c7b3544f8408101c060b0c0,
     type: 3}
+  pointImages: []
+  rocketTrails: []
   rocketFire: {fileID: 221941702}
   crashExplosion: {fileID: 19894158, guid: 9f03f372adf02874cb666857a9f97abd, type: 3}
   fuelExp: {fileID: 19897378, guid: 32e5eec4a4b3ffc4dba1ac0f5bb318be, type: 3}
   speedParticle: {fileID: 1941575171}
   frictionParticle: {fileID: 1192111997}
   crashSmoke: {fileID: 19833736, guid: c4a37725ffa1ac649ad3d2a26f08edcc, type: 3}
-  rocketTrails: []
+  ringDestroyParticle: {fileID: 19855650, guid: fe394d041df1a0547990f49cf653249f,
+    type: 3}
   forceMultiplier: 0.05
   moveSmoother: 200
   swerveSpeed: 100
-  swerveForce: 400
+  swerveForce: 10
   swipeGap: 0.005
   startFuel: 350
   speed: 50

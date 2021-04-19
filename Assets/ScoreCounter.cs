@@ -8,9 +8,8 @@ using DG.Tweening;
 public class ScoreCounter : MonoBehaviour
 {
     public int score;
-    int calScore;
+    private int calScore;
     public TextMeshProUGUI scoreText;
-
     public Image scoreImage;
 
     private void Start()

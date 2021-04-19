@@ -133,6 +133,7 @@ public class ExplosionScript : MonoBehaviour
             scoreCounter.GetComponent<ScoreCounter>().score += 100;
         }
         #endregion
+
         #region fiskiye
         if (other.gameObject.tag == "Fiskiye")
         {
@@ -142,6 +143,7 @@ public class ExplosionScript : MonoBehaviour
             scoreCounter.GetComponent<ScoreCounter>().score += 80;
         }
         #endregion
+
         #region PurpleBuildings
         if (other.gameObject.tag == "Purple1building")
         {
@@ -176,6 +178,7 @@ public class ExplosionScript : MonoBehaviour
             scoreCounter.GetComponent<ScoreCounter>().score += 200;
         }
         #endregion
+
         #region BlueBuildings
         if (other.gameObject.tag == "Blue1building")
         {

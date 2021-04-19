@@ -7,23 +7,23 @@ using DG.Tweening;
 
 public class DragShoot : MonoBehaviour
 {
-    Vector3 mousePressDownPos;
-    Vector3 mouseReleasePos;
+    private Vector3 mousePressDownPos;
+    private Vector3 mouseReleasePos;
 
-    Vector2 m_stableDeltaPos;
-    Vector2 m_startPos;
-    Vector2 m_deltaPos;
+    private Vector2 m_stableDeltaPos;
+    private Vector2 m_startPos;
+    private Vector2 m_deltaPos;
 
     public bool isEnded = false;
-    bool useFuel = false;
-    bool timerBool = false;
-    bool shot = false;
-    bool isStarted = false;
-    bool explosionTimer = false;
-    bool forward = false;
+    private bool useFuel = false;
+    private bool timerBool = false;
+    private bool shot = false;
+    private bool isStarted = false;
+    private bool explosionTimer = false;
+    private bool forward = false;
 
-    public CityColliders cc;
     public State currentState;
+    public CityColliders cc;
     public Rigidbody rb;
     public GameObject explosion;
     public ParticleSystem rocketFire;
@@ -32,8 +32,10 @@ public class DragShoot : MonoBehaviour
     public ParticleSystem speedParticle;
     public ParticleSystem frictionParticle;
     public ParticleSystem crashSmoke;
+    public GameObject[] pointImages;
     public TrailRenderer[] rocketTrails;
 
+    public int scoreCount = 1;
     public float forceMultiplier;
     public float moveSmoother;
     public float swerveSpeed;
@@ -43,16 +45,15 @@ public class DragShoot : MonoBehaviour
     public float speed;
     public float rocketForwardSpeed;
     private float fallSpeed = 75;
-    float startingXPos;
-    float fuel;
-    float timer = 2;
+    private float startingXPos;
+    private float fuel;
+    private float timer = 2;
     private float crashTimer = 2;
-    float useFuelMult;
-    float roll;
-    float rotate;
-    float speedSwitch = 1;
-    float slingRotate = -90;
-    public int scoreCount = 1;
+    private float useFuelMult;
+    private float roll;
+    private float rotate;
+    private float speedSwitch = 1;
+    private float slingRotate = -90;
 
     public Image fuelBar;
     public Image scoreBar;
@@ -60,7 +61,6 @@ public class DragShoot : MonoBehaviour
     public Image amazing;
     public Image perfect;
 
-    GameObject[] pointImages;
 
     public enum State
     {
@@ -241,14 +241,14 @@ public class DragShoot : MonoBehaviour
                     transform.DORotate(new Vector3(0, 0, -60), 0.5f);
                     transform.DOLocalRotate(new Vector3(0, 30, 0), 0.5f);
                 }
-                if (m_deltaPos.x < 0)
+                else if (m_deltaPos.x < 0)
                 {
                     transform.DORotate(new Vector3(0, 0, 60), 0.5f);
                     transform.DOLocalRotate(new Vector3(0, -30, 0), 0.5f);
                 }
-                else
+                if (m_startPos.x == m_stableDeltaPos.x)
                 {
-                    //transform.DORotate(Vector3.zero, 0.5f);
+                    rotate = 0;
                 }
 
                 //Local Rotate Input
@@ -342,19 +342,7 @@ public class DragShoot : MonoBehaviour
         }
         #endregion
     }
-    public void Shoot(Vector3 Force)
-    {
-        if (shot)
-            return;
-
-        useFuelMult = Force.y;
-        rb.AddForce(new Vector3(Force.x, Force.y, Force.y) * forceMultiplier, ForceMode.Impulse);
-        speedSwitch = (Force.y * forceMultiplier) / 20;
-        currentState = State.Fly;
-        rb.useGravity = false;
-        shot = true;
-    }
-
+    
     #region Triggers / Colliders
     private void OnTriggerEnter(Collider other)
     {
@@ -520,6 +508,19 @@ public class DragShoot : MonoBehaviour
     #endregion
 
     #region Methods
+    public void Shoot(Vector3 Force)
+    {
+        if (shot)
+            return;
+
+        useFuelMult = Force.y;
+        rb.AddForce(new Vector3(Force.x, Force.y, Force.y) * forceMultiplier, ForceMode.Impulse);
+        speedSwitch = (Force.y * forceMultiplier) / 20;
+        currentState = State.Fly;
+        rb.useGravity = false;
+        shot = true;
+    }
+
     public void Restart()
     {
         SceneManager.LoadScene(0);

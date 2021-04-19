@@ -27,9 +27,11 @@ public class RocketController : MonoBehaviour
     public CityColliders cc;
     public Rigidbody rb;
     public GameObject explosion;
+    public GameObject swerveTutorial;
     public GameObject[] pointImages;
     public TrailRenderer[] rocketTrails;
-    
+    public LineRenderer lr;
+
     [Header("Particles")]
     public ParticleSystem rocketFire;
     public ParticleSystem crashExplosion;
@@ -51,6 +53,7 @@ public class RocketController : MonoBehaviour
     public float rocketForwardSpeed;
 
     public int scoreCount = 1;
+    public float colorLerp = 0.1f;
     private float fallSpeed = 75;
     private float startingXPos;
     private float fuel;
@@ -61,6 +64,8 @@ public class RocketController : MonoBehaviour
     private float rotate;
     private float speedSwitch = 1;
     private float slingRotate = -90;
+    private float colorR = 0;
+    private float colorG = 0;
 
     public Image fuelBar;
     public Image scoreBar;
@@ -104,14 +109,20 @@ public class RocketController : MonoBehaviour
         #region Tutorial
         if (gameObject.transform.position.y >= 180 && tutorialStop)
         {
+            Debug.Log("Tutorial");
             Time.timeScale = 0f;
-            
+            swerveTutorial.SetActive(true);
+            swerveTutorial.GetComponent<Animator>().SetBool("scaleAnim", true);
             if (Input.GetMouseButtonDown(0))
             {
                 tutorialStop = false;
                 Time.timeScale = 1f;
-                //Tutorial UI setactives here.
+                swerveTutorial.GetComponent<Animator>().SetBool("scaleAnim", false);
             }
+        }
+        if (swerveTutorial.transform.localScale == Vector3.zero && !tutorialStop)
+        {
+            swerveTutorial.SetActive(false);
         }
         #endregion
 
@@ -187,6 +198,31 @@ public class RocketController : MonoBehaviour
                 {
                     DrawTrajectory.Instance.UpdateTrajectory(forceV, rb, new Vector3(transform.position.x, transform.position.y, transform.position.z + 200));
                 }
+
+                #region LineRenderer Color
+                Vector3 mousePos = Input.mousePosition;
+                float xValue = (mousePressDownPos.x - mousePos.x);
+
+                lr.startColor = new Color(colorR, colorG, 0, 1);
+                lr.endColor = new Color(colorR, colorG, 0, 1);
+
+                if (xValue < -850 || xValue > 850)
+                {
+                    colorR = Mathf.Lerp(colorR, 1, colorLerp);
+                    colorG = Mathf.Lerp(colorG, 0, colorLerp);
+                }
+                if (xValue < -200 && xValue > -850 || xValue > 200 && xValue < 850)
+                {
+                    colorR = Mathf.Lerp(colorR, 1, colorLerp);
+                    colorG = Mathf.Lerp(colorG, 1, colorLerp);
+                }
+                if (xValue > -200 && xValue < 200)
+                {
+                    colorR = Mathf.Lerp(colorR, 0, colorLerp);
+                    colorG = Mathf.Lerp(colorG, 1, colorLerp);
+                }
+                #endregion
+
             }
             if (Input.GetMouseButtonUp(0) && !isStarted) //Trajectory Shoot
             {
@@ -216,17 +252,15 @@ public class RocketController : MonoBehaviour
 
             if (!forward) // Left & right rotation in sling shot 
             {
-                float rotateRate = (transform.position.x - startingXPos) / 4.5f;
-                slingRotate = Mathf.Lerp(slingRotate, 60, 0.004f);
+                float rotateRate = (transform.position.x - startingXPos) / 2.5f;
+                slingRotate = Mathf.Lerp(slingRotate, 60, 0.007f);
 
                 if (transform.position.x < startingXPos)
                 {
-                    //Debug.LogWarning("Return");
                     transform.DOLocalRotate(new Vector3(slingRotate, rotateRate, 0), 0f);
                 }
                 if (transform.position.x > startingXPos)
                 {
-                    //Debug.LogWarning("Return");
                     transform.DOLocalRotate(new Vector3(slingRotate, rotateRate, 0), 0f);
                 }
             }
@@ -336,7 +370,7 @@ public class RocketController : MonoBehaviour
                     }
                 }
             }
-            
+
             #endregion
         }
         else
@@ -396,7 +430,7 @@ public class RocketController : MonoBehaviour
         }
         #endregion
     }
-    
+
     #region Triggers / Colliders
     private void OnTriggerEnter(Collider other)
     {
@@ -564,8 +598,7 @@ public class RocketController : MonoBehaviour
     {
         if (other.gameObject.tag == "Ring")
         {
-            //Debug.LogError("Ring Out");
-            Destroy(other.gameObject,0.5f);
+            Destroy(other.gameObject, 0.5f);
             Instantiate(ringDestroyParticle, other.gameObject.transform.position, Quaternion.identity);
         }
     }

@@ -593,7 +593,6 @@ public class RocketController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         explosionTimer = true;
-        isEnded = true; //
         foreach (var image in pointImages)
         {
             image.SetActive(false);

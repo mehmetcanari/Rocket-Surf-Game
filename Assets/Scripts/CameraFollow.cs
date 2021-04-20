@@ -31,6 +31,10 @@ public class CameraFollow : MonoBehaviour
         if (rc.currentState == RocketController.State.Crash)
         {
             sc.CalculateScore();
+            //transform.DORotate(new Vector3(30, 0, 0), 1);
+            //transform.DOMoveY(transform.position.y + 70, 1);
+            //transform.DOMoveZ(transform.position.z - 70, 1);
+            //rc.isEnded = true;
         }
         if (rc.isEnded)
         {

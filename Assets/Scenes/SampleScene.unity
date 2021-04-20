@@ -2483,6 +2483,95 @@ Transform:
   m_Father: {fileID: 151805785}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &93220985
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7020.4233
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7020.4233
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7020.4233
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 153.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -97.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -521.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.50000083
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5000007
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.4999993
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.49999925
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 434f38cdb749bb64293aecc843761532, type: 2}
+    - target: {fileID: 919132149155446097, guid: f5efc3ed7a6d68e42b979e2f57ff3d18,
+        type: 3}
+      propertyPath: m_Name
+      value: DTTcliff (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f5efc3ed7a6d68e42b979e2f57ff3d18, type: 3}
 --- !u!1 &102398789 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a20a8219d9fbc154f96b75915ff82a95,
@@ -56170,6 +56259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd4c32152f4eaf42a08df33fc2e88b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraRay: 0
   isEnded: 0
   currentState: 0
   cc: {fileID: 518268458}
@@ -56180,7 +56270,7 @@ MonoBehaviour:
   pointImages: []
   rocketTrails: []
   lr: {fileID: 771557786}
-  sc: {fileID: 0}
+  sc: {fileID: 1025465373}
   rocketFire: {fileID: 221941702}
   crashExplosion: {fileID: 19894158, guid: 9f03f372adf02874cb666857a9f97abd, type: 3}
   fuelExp: {fileID: 19897378, guid: 32e5eec4a4b3ffc4dba1ac0f5bb318be, type: 3}
@@ -56194,7 +56284,7 @@ MonoBehaviour:
   swerveSpeed: 100
   swerveForce: 10
   swipeGap: 0.005
-  startFuel: 35
+  startFuel: 100
   speed: 50
   rocketForwardSpeed: 350
   scoreCount: 1

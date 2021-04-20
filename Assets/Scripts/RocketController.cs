@@ -259,7 +259,7 @@ public class RocketController : MonoBehaviour
             if (!forward) // Left & right rotation in sling shot 
             {
                 float rotateRate = (transform.position.x - startingXPos) / 2.5f;
-                slingRotate = Mathf.Lerp(slingRotate, 60, 0.007f);
+                slingRotate = Mathf.Lerp(slingRotate, 60, 0.002f);
 
                 if (transform.position.x < startingXPos)
                 {
@@ -442,7 +442,7 @@ public class RocketController : MonoBehaviour
     {
         if (other.gameObject.tag == "Fuel")
         {
-            fuel += 5;
+            fuel += 15;
             Destroy(other.gameObject);
             Instantiate(fuelExp, other.transform.position, Quaternion.identity);
         }
@@ -458,7 +458,7 @@ public class RocketController : MonoBehaviour
                     Mathf.Lerp(item.gameObject.GetComponent<TrailRenderer>().time, 1, 1f);
             }
 
-            rocketForwardSpeed = Mathf.Lerp(rocketForwardSpeed, speed * 2.4f, 0.7f);
+            rocketForwardSpeed = Mathf.Lerp(rocketForwardSpeed, speed * 3.4f, 0.8f);
 
             roll = 250;
             speedParticle.gameObject.SetActive(true);

@@ -29,6 +29,6 @@ public class ScoreCounter : MonoBehaviour
         {
             calScore = score;
         }
-        scoreText.text = "" + calScore;
+        scoreText.text = "" + calScore * 17f;
     }
 }

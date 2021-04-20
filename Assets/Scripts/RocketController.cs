@@ -14,6 +14,7 @@ public class RocketController : MonoBehaviour
     private Vector2 m_startPos;
     private Vector2 m_deltaPos;
 
+    public bool cameraRay = false;
     public bool isEnded = false;
     private bool useFuel = false;
     private bool timerBool = false;
@@ -31,6 +32,7 @@ public class RocketController : MonoBehaviour
     public GameObject[] pointImages;
     public TrailRenderer[] rocketTrails;
     public LineRenderer lr;
+    public ScoreCounter sc;
 
     [Header("Particles")]
     public ParticleSystem rocketFire;
@@ -81,9 +83,11 @@ public class RocketController : MonoBehaviour
         Fall,
         Crash,
     }
+
     void Start()
     {
         #region Start Arguments
+        cameraRay = false;
         tutorialStop = true;
         pointImages = GameObject.FindGameObjectsWithTag("PointImage");
         foreach (var item in cc.cities)
@@ -138,6 +142,7 @@ public class RocketController : MonoBehaviour
         {
             frictionParticle.gameObject.SetActive(true);
             crashTimer -= Time.deltaTime;
+            cameraRay = true;
         }
 
         if (crashTimer <= 0)
@@ -177,6 +182,7 @@ public class RocketController : MonoBehaviour
         if (currentState == State.Crash)
         {
             isEnded = true;
+            sc.CalculateScore();
         }
         #endregion
 
@@ -196,7 +202,7 @@ public class RocketController : MonoBehaviour
 
                 if (!shot)
                 {
-                    DrawTrajectory.Instance.UpdateTrajectory(forceV, rb, new Vector3(transform.position.x, transform.position.y, transform.position.z + 200));
+                    DrawTrajectory.Instance.UpdateTrajectory(forceV, rb, new Vector3(transform.position.x, transform.position.y, transform.position.z + 50));
                 }
 
                 #region LineRenderer Color
@@ -353,7 +359,7 @@ public class RocketController : MonoBehaviour
                 {
                     if (shot)
                     {
-                        transform.DOLocalRotate(new Vector3(0, 0, 0), 1f);
+                        transform.DORotate(new Vector3(0, 0, 0), 1f);
                     }
 
                     else if (!shot)
@@ -436,7 +442,7 @@ public class RocketController : MonoBehaviour
     {
         if (other.gameObject.tag == "Fuel")
         {
-            fuel += 15;
+            fuel += 5;
             Destroy(other.gameObject);
             Instantiate(fuelExp, other.transform.position, Quaternion.identity);
         }
@@ -587,6 +593,7 @@ public class RocketController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         explosionTimer = true;
+        isEnded = true; //
         foreach (var image in pointImages)
         {
             image.SetActive(false);

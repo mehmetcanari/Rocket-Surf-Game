@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1457895532516099962}
   m_Layer: 0
   m_Name: kolonlar_cell.097
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717413708423667482}
   m_Layer: 0
-  m_Name: parcalananTekkatlbina
+  m_Name: "prefabparcal\u0131"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 6567001332491759863}
   m_Layer: 0
   m_Name: kolonlar_cell.066
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 3086225201413899576}
   m_Layer: 0
   m_Name: Cube.048
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 3420875497475591010}
   m_Layer: 0
   m_Name: Cube.111
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -719,7 +719,7 @@ GameObject:
   - component: {fileID: 6319537185613800843}
   m_Layer: 0
   m_Name: Cube.135
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -830,7 +830,7 @@ GameObject:
   - component: {fileID: 3857678956665207250}
   m_Layer: 0
   m_Name: kolonlar_cell.092
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 5051466361116958031}
   m_Layer: 0
   m_Name: kolonlar_cell.016
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 6034268686167114679}
   m_Layer: 0
   m_Name: Cube.063
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1163,7 +1163,7 @@ GameObject:
   - component: {fileID: 8815891840552647521}
   m_Layer: 0
   m_Name: Cube.121
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 1185259511570649932}
   m_Layer: 0
   m_Name: kolonlar_cell.041
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1385,7 +1385,7 @@ GameObject:
   - component: {fileID: 3297445707241615021}
   m_Layer: 0
   m_Name: kolonlar_cell.074
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1496,7 +1496,7 @@ GameObject:
   - component: {fileID: 4883784524577113884}
   m_Layer: 0
   m_Name: kolonlar_cell.038
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1607,7 +1607,7 @@ GameObject:
   - component: {fileID: 5883695354420397520}
   m_Layer: 0
   m_Name: Cube.091
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1718,7 +1718,7 @@ GameObject:
   - component: {fileID: 5094976452652909392}
   m_Layer: 0
   m_Name: Cube.058
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1829,7 +1829,7 @@ GameObject:
   - component: {fileID: 2004028758411585548}
   m_Layer: 0
   m_Name: Cube.072
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1940,7 +1940,7 @@ GameObject:
   - component: {fileID: 5383373590197806610}
   m_Layer: 0
   m_Name: Cube.157
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2051,7 +2051,7 @@ GameObject:
   - component: {fileID: 780063974287270837}
   m_Layer: 0
   m_Name: Cube.060
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2162,7 +2162,7 @@ GameObject:
   - component: {fileID: 282797213233731479}
   m_Layer: 0
   m_Name: Cube.155
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2273,7 +2273,7 @@ GameObject:
   - component: {fileID: 3563271561123834297}
   m_Layer: 0
   m_Name: Cube.064
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2384,7 +2384,7 @@ GameObject:
   - component: {fileID: 875823821453468635}
   m_Layer: 0
   m_Name: kolonlar_cell.067
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2495,7 +2495,7 @@ GameObject:
   - component: {fileID: 8104733856274625130}
   m_Layer: 0
   m_Name: Cube.045
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2606,7 +2606,7 @@ GameObject:
   - component: {fileID: 6794181276154913512}
   m_Layer: 0
   m_Name: Cube.061
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2717,7 +2717,7 @@ GameObject:
   - component: {fileID: 7361593935831499631}
   m_Layer: 0
   m_Name: Cube.081
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2828,7 +2828,7 @@ GameObject:
   - component: {fileID: 7421802914489140680}
   m_Layer: 0
   m_Name: Cube.117
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2939,7 +2939,7 @@ GameObject:
   - component: {fileID: 1337326488744314201}
   m_Layer: 0
   m_Name: Cube.159
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3050,7 +3050,7 @@ GameObject:
   - component: {fileID: 8984158675516341619}
   m_Layer: 0
   m_Name: kolonlar_cell.004
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3161,7 +3161,7 @@ GameObject:
   - component: {fileID: 695900858121477689}
   m_Layer: 0
   m_Name: kolonlar_cell.031
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3272,7 +3272,7 @@ GameObject:
   - component: {fileID: 8728063913695645311}
   m_Layer: 0
   m_Name: Cube.112
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3383,7 +3383,7 @@ GameObject:
   - component: {fileID: 3818828641747521973}
   m_Layer: 0
   m_Name: Cube.003
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3494,7 +3494,7 @@ GameObject:
   - component: {fileID: 6296031462905679938}
   m_Layer: 0
   m_Name: kolonlar_cell.037
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3605,7 +3605,7 @@ GameObject:
   - component: {fileID: 7278444184980761096}
   m_Layer: 0
   m_Name: Cube.138
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3716,7 +3716,7 @@ GameObject:
   - component: {fileID: 6447945006220974641}
   m_Layer: 0
   m_Name: kolonlar_cell.055
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3827,7 +3827,7 @@ GameObject:
   - component: {fileID: 3193030339030571468}
   m_Layer: 0
   m_Name: Cube.126
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3938,7 +3938,7 @@ GameObject:
   - component: {fileID: 5613344988181731846}
   m_Layer: 0
   m_Name: kolonlar_cell
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4049,7 +4049,7 @@ GameObject:
   - component: {fileID: 4297208192516269885}
   m_Layer: 0
   m_Name: Cube.069
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4160,7 +4160,7 @@ GameObject:
   - component: {fileID: 7594551111383546274}
   m_Layer: 0
   m_Name: Cube.013
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4271,7 +4271,7 @@ GameObject:
   - component: {fileID: 6099834796852924430}
   m_Layer: 0
   m_Name: Cube.078
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4382,7 +4382,7 @@ GameObject:
   - component: {fileID: 6971261183520425605}
   m_Layer: 0
   m_Name: Cube.134
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4493,7 +4493,7 @@ GameObject:
   - component: {fileID: 5924688590253734666}
   m_Layer: 0
   m_Name: kolonlar_cell.020
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4604,7 +4604,7 @@ GameObject:
   - component: {fileID: 9098081912624925937}
   m_Layer: 0
   m_Name: Cube.070
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4715,7 +4715,7 @@ GameObject:
   - component: {fileID: 1237183372507983351}
   m_Layer: 0
   m_Name: Cube.051
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4826,7 +4826,7 @@ GameObject:
   - component: {fileID: 2968677322952135447}
   m_Layer: 0
   m_Name: kolonlar_cell.040
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4937,7 +4937,7 @@ GameObject:
   - component: {fileID: 8966985545331518631}
   m_Layer: 0
   m_Name: Cube.024
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5048,7 +5048,7 @@ GameObject:
   - component: {fileID: 4770566248412684492}
   m_Layer: 0
   m_Name: Cube.076
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5159,7 +5159,7 @@ GameObject:
   - component: {fileID: 7232089235887501320}
   m_Layer: 0
   m_Name: kolonlar_cell.045
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5271,7 +5271,7 @@ GameObject:
   - component: {fileID: 4623594537975181938}
   m_Layer: 0
   m_Name: Cube.014
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5382,7 +5382,7 @@ GameObject:
   - component: {fileID: 2533126077072738529}
   m_Layer: 0
   m_Name: Cube.089
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5493,7 +5493,7 @@ GameObject:
   - component: {fileID: 6899821400928913973}
   m_Layer: 0
   m_Name: Cube.004
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5604,7 +5604,7 @@ GameObject:
   - component: {fileID: 3026907812029938606}
   m_Layer: 0
   m_Name: Cube.044
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5715,7 +5715,7 @@ GameObject:
   - component: {fileID: 1192852133539921659}
   m_Layer: 0
   m_Name: kolonlar_cell.061
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5826,7 +5826,7 @@ GameObject:
   - component: {fileID: 1897666916489011521}
   m_Layer: 0
   m_Name: kolonlar_cell.036
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5937,7 +5937,7 @@ GameObject:
   - component: {fileID: 2353649429818443735}
   m_Layer: 0
   m_Name: Cube.125
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6048,7 +6048,7 @@ GameObject:
   - component: {fileID: 5250813695951868708}
   m_Layer: 0
   m_Name: Cube.105
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6159,7 +6159,7 @@ GameObject:
   - component: {fileID: 2913130882353527291}
   m_Layer: 0
   m_Name: Cube.067
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6270,7 +6270,7 @@ GameObject:
   - component: {fileID: 4767798179322815567}
   m_Layer: 0
   m_Name: Cube.158
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6381,7 +6381,7 @@ GameObject:
   - component: {fileID: 1301435322384521159}
   m_Layer: 0
   m_Name: kolonlar_cell.007
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6492,7 +6492,7 @@ GameObject:
   - component: {fileID: 4179277824282959290}
   m_Layer: 0
   m_Name: Cube.077
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6603,7 +6603,7 @@ GameObject:
   - component: {fileID: 6353753764807506862}
   m_Layer: 0
   m_Name: Cube.115
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6714,7 +6714,7 @@ GameObject:
   - component: {fileID: 4945667183729568242}
   m_Layer: 0
   m_Name: kolonlar_cell.042
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6825,7 +6825,7 @@ GameObject:
   - component: {fileID: 8328207707295740604}
   m_Layer: 0
   m_Name: Cube.163
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6936,7 +6936,7 @@ GameObject:
   - component: {fileID: 6029446257808970411}
   m_Layer: 0
   m_Name: Cube.025
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7047,7 +7047,7 @@ GameObject:
   - component: {fileID: 7819521278423013460}
   m_Layer: 0
   m_Name: Cube.066
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7158,7 +7158,7 @@ GameObject:
   - component: {fileID: 3608871618198063315}
   m_Layer: 0
   m_Name: Cube.104
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7269,7 +7269,7 @@ GameObject:
   - component: {fileID: 7074859184193839235}
   m_Layer: 0
   m_Name: Cube.088
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7380,7 +7380,7 @@ GameObject:
   - component: {fileID: 7553582971733934717}
   m_Layer: 0
   m_Name: kolonlar_cell.090
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7492,7 +7492,7 @@ GameObject:
   - component: {fileID: 6585277292618500067}
   m_Layer: 0
   m_Name: Cylinder.015
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7603,7 +7603,7 @@ GameObject:
   - component: {fileID: 3184960369847416170}
   m_Layer: 0
   m_Name: kolonlar_cell.046
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7714,7 +7714,7 @@ GameObject:
   - component: {fileID: 6294665566206348838}
   m_Layer: 0
   m_Name: Cube.136
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7825,7 +7825,7 @@ GameObject:
   - component: {fileID: 8574599524092460511}
   m_Layer: 0
   m_Name: kolonlar_cell.005
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7936,7 +7936,7 @@ GameObject:
   - component: {fileID: 727904935927652473}
   m_Layer: 0
   m_Name: kolonlar_cell.077
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8047,7 +8047,7 @@ GameObject:
   - component: {fileID: 1649016369539243748}
   m_Layer: 0
   m_Name: Cube.047
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8158,7 +8158,7 @@ GameObject:
   - component: {fileID: 2179669855254116783}
   m_Layer: 0
   m_Name: kolonlar_cell.080
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8269,7 +8269,7 @@ GameObject:
   - component: {fileID: 5080466057938030557}
   m_Layer: 0
   m_Name: kolonlar_cell.039
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8380,7 +8380,7 @@ GameObject:
   - component: {fileID: 8987333560592687941}
   m_Layer: 0
   m_Name: kolonlar_cell.071
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8491,7 +8491,7 @@ GameObject:
   - component: {fileID: 4297279608702036858}
   m_Layer: 0
   m_Name: Cylinder.002
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8602,7 +8602,7 @@ GameObject:
   - component: {fileID: 3436597385379350863}
   m_Layer: 0
   m_Name: kolonlar_cell.096
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8713,7 +8713,7 @@ GameObject:
   - component: {fileID: 7969842453029110058}
   m_Layer: 0
   m_Name: Cube.053
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8824,7 +8824,7 @@ GameObject:
   - component: {fileID: 9175959056406885087}
   m_Layer: 0
   m_Name: kolonlar_cell.050
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8936,7 +8936,7 @@ GameObject:
   - component: {fileID: 6147573188447336313}
   m_Layer: 0
   m_Name: kolonlar_cell.098
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9047,7 +9047,7 @@ GameObject:
   - component: {fileID: 1629014380537372884}
   m_Layer: 0
   m_Name: kolonlar_cell.076
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9158,7 +9158,7 @@ GameObject:
   - component: {fileID: 1773185834243509901}
   m_Layer: 0
   m_Name: Cube.020
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9269,7 +9269,7 @@ GameObject:
   - component: {fileID: 7077008008940220473}
   m_Layer: 0
   m_Name: kolonlar_cell.033
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9381,7 +9381,7 @@ GameObject:
   - component: {fileID: 5941381347089412638}
   m_Layer: 0
   m_Name: Cube.018
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9492,7 +9492,7 @@ GameObject:
   - component: {fileID: 8165990406082957480}
   m_Layer: 0
   m_Name: kolonlar_cell.065
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9604,7 +9604,7 @@ GameObject:
   - component: {fileID: 7506731721891748386}
   m_Layer: 0
   m_Name: kolonlar_cell.002
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9716,7 +9716,7 @@ GameObject:
   - component: {fileID: 6202025148586037554}
   m_Layer: 0
   m_Name: kolonlar_cell.088
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9827,7 +9827,7 @@ GameObject:
   - component: {fileID: 2992593084367302149}
   m_Layer: 0
   m_Name: Cube.054
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9938,7 +9938,7 @@ GameObject:
   - component: {fileID: 3045998884043615500}
   m_Layer: 0
   m_Name: Cube.019
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10049,7 +10049,7 @@ GameObject:
   - component: {fileID: 8178152489589925695}
   m_Layer: 0
   m_Name: kolonlar_cell.011
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10160,7 +10160,7 @@ GameObject:
   - component: {fileID: 8111809330831116194}
   m_Layer: 0
   m_Name: kolonlar_cell.075
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10271,7 +10271,7 @@ GameObject:
   - component: {fileID: 7163041366177546660}
   m_Layer: 0
   m_Name: Cube.052
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10382,7 +10382,7 @@ GameObject:
   - component: {fileID: 6026778955369755362}
   m_Layer: 0
   m_Name: kolonlar_cell.078
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10494,7 +10494,7 @@ GameObject:
   - component: {fileID: 8580453928768967668}
   m_Layer: 0
   m_Name: Cube.131
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10605,7 +10605,7 @@ GameObject:
   - component: {fileID: 8631112788529600810}
   m_Layer: 0
   m_Name: kolonlar_cell.063
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10717,7 +10717,7 @@ GameObject:
   - component: {fileID: 3064516517048025335}
   m_Layer: 0
   m_Name: Cube.079
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10828,7 +10828,7 @@ GameObject:
   - component: {fileID: 8728154213086787699}
   m_Layer: 0
   m_Name: kolonlar_cell.069
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10939,7 +10939,7 @@ GameObject:
   - component: {fileID: 395443978118455222}
   m_Layer: 0
   m_Name: kolonlar_cell.017
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11050,7 +11050,7 @@ GameObject:
   - component: {fileID: 6934584592275107552}
   m_Layer: 0
   m_Name: kolonlar_cell.051
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11161,7 +11161,7 @@ GameObject:
   - component: {fileID: 5504639196550331754}
   m_Layer: 0
   m_Name: Cube.167
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11272,7 +11272,7 @@ GameObject:
   - component: {fileID: 751292718642925194}
   m_Layer: 0
   m_Name: kolonlar_cell.044
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11383,7 +11383,7 @@ GameObject:
   - component: {fileID: 8900874708831920284}
   m_Layer: 0
   m_Name: kolonlar_cell.047
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11495,7 +11495,7 @@ GameObject:
   - component: {fileID: 7206289767937680124}
   m_Layer: 0
   m_Name: kolonlar_cell.084
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11607,7 +11607,7 @@ GameObject:
   - component: {fileID: 8400820115719310522}
   m_Layer: 0
   m_Name: Cube.062
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11718,7 +11718,7 @@ GameObject:
   - component: {fileID: 1433691281638513519}
   m_Layer: 0
   m_Name: kolonlar_cell.010
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11829,7 +11829,7 @@ GameObject:
   - component: {fileID: 6132120527350097831}
   m_Layer: 0
   m_Name: Cube.140
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11940,7 +11940,7 @@ GameObject:
   - component: {fileID: 6815128703321690589}
   m_Layer: 0
   m_Name: Cube.029
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12051,7 +12051,7 @@ GameObject:
   - component: {fileID: 7098160143831033119}
   m_Layer: 0
   m_Name: Cube.073
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12162,7 +12162,7 @@ GameObject:
   - component: {fileID: 8966885862699457363}
   m_Layer: 0
   m_Name: Cube.057
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12273,7 +12273,7 @@ GameObject:
   - component: {fileID: 3343024303339102924}
   m_Layer: 0
   m_Name: Cube.030
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12384,7 +12384,7 @@ GameObject:
   - component: {fileID: 7928457070207171169}
   m_Layer: 0
   m_Name: kolonlar_cell.070
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12495,7 +12495,7 @@ GameObject:
   - component: {fileID: 5960193671688307144}
   m_Layer: 0
   m_Name: Cube.166
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12606,7 +12606,7 @@ GameObject:
   - component: {fileID: 2118346091834817309}
   m_Layer: 0
   m_Name: kolonlar_cell.023
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12718,7 +12718,7 @@ GameObject:
   - component: {fileID: 2275155616871701046}
   m_Layer: 0
   m_Name: kolonlar_cell.085
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12829,7 +12829,7 @@ GameObject:
   - component: {fileID: 8126566171680266309}
   m_Layer: 0
   m_Name: Cube.108
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12940,7 +12940,7 @@ GameObject:
   - component: {fileID: 5034079403539103593}
   m_Layer: 0
   m_Name: kolonlar_cell.018
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13051,7 +13051,7 @@ GameObject:
   - component: {fileID: 4795815722627452516}
   m_Layer: 0
   m_Name: kolonlar_cell.035
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13162,7 +13162,7 @@ GameObject:
   - component: {fileID: 4201484946555083557}
   m_Layer: 0
   m_Name: Cube.129
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13273,7 +13273,7 @@ GameObject:
   - component: {fileID: 3666670445072033469}
   m_Layer: 0
   m_Name: kolonlar_cell.073
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13384,7 +13384,7 @@ GameObject:
   - component: {fileID: 3723119955431206785}
   m_Layer: 0
   m_Name: Cube.021
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13495,7 +13495,7 @@ GameObject:
   - component: {fileID: 654626268882736382}
   m_Layer: 0
   m_Name: Cube.055
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13606,7 +13606,7 @@ GameObject:
   - component: {fileID: 1084619306453376348}
   m_Layer: 0
   m_Name: Cube.016
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13717,7 +13717,7 @@ GameObject:
   - component: {fileID: 5735519298514874676}
   m_Layer: 0
   m_Name: kolonlar_cell.081
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13828,7 +13828,7 @@ GameObject:
   - component: {fileID: 4685088038732409470}
   m_Layer: 0
   m_Name: Cube.090
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13939,7 +13939,7 @@ GameObject:
   - component: {fileID: 5519853974034908738}
   m_Layer: 0
   m_Name: kolonlar_cell.068
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14050,7 +14050,7 @@ GameObject:
   - component: {fileID: 3556548720957909352}
   m_Layer: 0
   m_Name: Cube.120
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14161,7 +14161,7 @@ GameObject:
   - component: {fileID: 4710234299684699265}
   m_Layer: 0
   m_Name: Cube.113
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14272,7 +14272,7 @@ GameObject:
   - component: {fileID: 5173132571202953920}
   m_Layer: 0
   m_Name: Cube.059
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14383,7 +14383,7 @@ GameObject:
   - component: {fileID: 2618592773125551062}
   m_Layer: 0
   m_Name: kolonlar_cell.048
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14494,7 +14494,7 @@ GameObject:
   - component: {fileID: 2345472845531549989}
   m_Layer: 0
   m_Name: kolonlar_cell.026
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14605,7 +14605,7 @@ GameObject:
   - component: {fileID: 2769987098774338700}
   m_Layer: 0
   m_Name: kolonlar_cell.049
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14716,7 +14716,7 @@ GameObject:
   - component: {fileID: 499296546318351222}
   m_Layer: 0
   m_Name: kolonlar_cell.093
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14827,7 +14827,7 @@ GameObject:
   - component: {fileID: 6885884996101269791}
   m_Layer: 0
   m_Name: Cube.165
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14938,7 +14938,7 @@ GameObject:
   - component: {fileID: 8715839380789437184}
   m_Layer: 0
   m_Name: kolonlar_cell.056
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15050,7 +15050,7 @@ GameObject:
   - component: {fileID: 75888702356092968}
   m_Layer: 0
   m_Name: kolonlar_cell.013
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15161,7 +15161,7 @@ GameObject:
   - component: {fileID: 885505167021179952}
   m_Layer: 0
   m_Name: Cube.153
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15272,7 +15272,7 @@ GameObject:
   - component: {fileID: 4235765496976501334}
   m_Layer: 0
   m_Name: kolonlar_cell.029
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15383,7 +15383,7 @@ GameObject:
   - component: {fileID: 2481709552998417513}
   m_Layer: 0
   m_Name: Cube.106
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15494,7 +15494,7 @@ GameObject:
   - component: {fileID: 1106125984946931185}
   m_Layer: 0
   m_Name: kolonlar_cell.057
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15605,7 +15605,7 @@ GameObject:
   - component: {fileID: 4975343931780891146}
   m_Layer: 0
   m_Name: kolonlar_cell.060
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15716,7 +15716,7 @@ GameObject:
   - component: {fileID: 1385252064014626235}
   m_Layer: 0
   m_Name: Cube.133
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15827,7 +15827,7 @@ GameObject:
   - component: {fileID: 1913852342696830213}
   m_Layer: 0
   m_Name: kolonlar_cell.028
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15938,7 +15938,7 @@ GameObject:
   - component: {fileID: 9115313771114330300}
   m_Layer: 0
   m_Name: kolonlar_cell.095
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16049,7 +16049,7 @@ GameObject:
   - component: {fileID: 8433336244137252706}
   m_Layer: 0
   m_Name: Cube.139
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16160,7 +16160,7 @@ GameObject:
   - component: {fileID: 1490167174904796445}
   m_Layer: 0
   m_Name: Cube.128
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16271,7 +16271,7 @@ GameObject:
   - component: {fileID: 5854121165528137052}
   m_Layer: 0
   m_Name: Cube.092
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16382,7 +16382,7 @@ GameObject:
   - component: {fileID: 1264068579303794315}
   m_Layer: 0
   m_Name: Cube.130
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16493,7 +16493,7 @@ GameObject:
   - component: {fileID: 2186270988180136165}
   m_Layer: 0
   m_Name: Cube.031
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16604,7 +16604,7 @@ GameObject:
   - component: {fileID: 5816351918322341934}
   m_Layer: 0
   m_Name: Cube.156
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16715,7 +16715,7 @@ GameObject:
   - component: {fileID: 4296428667076079017}
   m_Layer: 0
   m_Name: Cube.093
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16826,7 +16826,7 @@ GameObject:
   - component: {fileID: 3691083280680399985}
   m_Layer: 0
   m_Name: Cube.022
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16937,7 +16937,7 @@ GameObject:
   - component: {fileID: 4346578030168317185}
   m_Layer: 0
   m_Name: kolonlar_cell.025
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17048,7 +17048,7 @@ GameObject:
   - component: {fileID: 7862182839305291776}
   m_Layer: 0
   m_Name: kolonlar_cell.034
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17159,7 +17159,7 @@ GameObject:
   - component: {fileID: 6706332212896831123}
   m_Layer: 0
   m_Name: kolonlar_cell.001
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17270,7 +17270,7 @@ GameObject:
   - component: {fileID: 1587601016556730450}
   m_Layer: 0
   m_Name: Cube.116
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17381,7 +17381,7 @@ GameObject:
   - component: {fileID: 5545152676853106544}
   m_Layer: 0
   m_Name: Cube.085
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17492,7 +17492,7 @@ GameObject:
   - component: {fileID: 7391991035222883613}
   m_Layer: 0
   m_Name: kolonlar_cell.021
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17603,7 +17603,7 @@ GameObject:
   - component: {fileID: 8715575431478005129}
   m_Layer: 0
   m_Name: kolonlar_cell.009
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17714,7 +17714,7 @@ GameObject:
   - component: {fileID: 6075442186963430141}
   m_Layer: 0
   m_Name: Cube.118
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17825,7 +17825,7 @@ GameObject:
   - component: {fileID: 1961567305461658597}
   m_Layer: 0
   m_Name: Cube.015
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17936,7 +17936,7 @@ GameObject:
   - component: {fileID: 8787466759224303860}
   m_Layer: 0
   m_Name: Cube.119
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18047,7 +18047,7 @@ GameObject:
   - component: {fileID: 6463335547073339013}
   m_Layer: 0
   m_Name: kolonlar_cell.086
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18158,7 +18158,7 @@ GameObject:
   - component: {fileID: 8915329352889698644}
   m_Layer: 0
   m_Name: Cube.028
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18269,7 +18269,7 @@ GameObject:
   - component: {fileID: 7045330100966464783}
   m_Layer: 0
   m_Name: Cube.050
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18380,7 +18380,7 @@ GameObject:
   - component: {fileID: 9032624612238605152}
   m_Layer: 0
   m_Name: Cube.011
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18491,7 +18491,7 @@ GameObject:
   - component: {fileID: 3387240646618486801}
   m_Layer: 0
   m_Name: kolonlar_cell.006
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18603,7 +18603,7 @@ GameObject:
   - component: {fileID: 3707221639785550723}
   m_Layer: 0
   m_Name: kolonlar_cell.062
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18714,7 +18714,7 @@ GameObject:
   - component: {fileID: 7263804055928232297}
   m_Layer: 0
   m_Name: kolonlar_cell.094
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18825,7 +18825,7 @@ GameObject:
   - component: {fileID: 5643494773417678042}
   m_Layer: 0
   m_Name: Cube.046
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18936,7 +18936,7 @@ GameObject:
   - component: {fileID: 3371945048965967565}
   m_Layer: 0
   m_Name: kolonlar_cell.058
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19048,7 +19048,7 @@ GameObject:
   - component: {fileID: 8550393092365501127}
   m_Layer: 0
   m_Name: Cube.107
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19159,7 +19159,7 @@ GameObject:
   - component: {fileID: 3573682445756198461}
   m_Layer: 0
   m_Name: kolonlar_cell.024
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19270,7 +19270,7 @@ GameObject:
   - component: {fileID: 3083073107879531950}
   m_Layer: 0
   m_Name: Cube.123
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19381,7 +19381,7 @@ GameObject:
   - component: {fileID: 2684632084965613999}
   m_Layer: 0
   m_Name: kolonlar_cell.032
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19492,7 +19492,7 @@ GameObject:
   - component: {fileID: 1495043979552907023}
   m_Layer: 0
   m_Name: kolonlar_cell.030
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19603,7 +19603,7 @@ GameObject:
   - component: {fileID: 3270531051101841230}
   m_Layer: 0
   m_Name: kolonlar_cell.059
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19714,7 +19714,7 @@ GameObject:
   - component: {fileID: 3724687400541185058}
   m_Layer: 0
   m_Name: kolonlar_cell.012
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19825,7 +19825,7 @@ GameObject:
   - component: {fileID: 2739927592928331251}
   m_Layer: 0
   m_Name: Cube.110
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19936,7 +19936,7 @@ GameObject:
   - component: {fileID: 2173371168475268553}
   m_Layer: 0
   m_Name: kolonlar_cell.027
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20047,7 +20047,7 @@ GameObject:
   - component: {fileID: 7344072069733616649}
   m_Layer: 0
   m_Name: Cube.005
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20158,7 +20158,7 @@ GameObject:
   - component: {fileID: 8233099615772353254}
   m_Layer: 0
   m_Name: Cube.160
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20269,7 +20269,7 @@ GameObject:
   - component: {fileID: 4277624007687672820}
   m_Layer: 0
   m_Name: kolonlar_cell.079
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20381,7 +20381,7 @@ GameObject:
   - component: {fileID: 3780473601272940419}
   m_Layer: 0
   m_Name: Cube.042
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20492,7 +20492,7 @@ GameObject:
   - component: {fileID: 5648756667475057515}
   m_Layer: 0
   m_Name: kolonlar_cell.082
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20603,7 +20603,7 @@ GameObject:
   - component: {fileID: 2782901998849023929}
   m_Layer: 0
   m_Name: Cube.127
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20714,7 +20714,7 @@ GameObject:
   - component: {fileID: 8364153411485902843}
   m_Layer: 0
   m_Name: Cube.080
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20825,7 +20825,7 @@ GameObject:
   - component: {fileID: 3882429408735361476}
   m_Layer: 0
   m_Name: Cube.074
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20936,7 +20936,7 @@ GameObject:
   - component: {fileID: 3737887054433161835}
   m_Layer: 0
   m_Name: kolonlar_cell.083
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21047,7 +21047,7 @@ GameObject:
   - component: {fileID: 2340123327009768721}
   m_Layer: 0
   m_Name: Cube.068
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21158,7 +21158,7 @@ GameObject:
   - component: {fileID: 7747837297311096005}
   m_Layer: 0
   m_Name: Cube.023
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21269,7 +21269,7 @@ GameObject:
   - component: {fileID: 6334595825685151543}
   m_Layer: 0
   m_Name: Cube.075
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21380,7 +21380,7 @@ GameObject:
   - component: {fileID: 8598699114131859057}
   m_Layer: 0
   m_Name: Cube.122
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21491,7 +21491,7 @@ GameObject:
   - component: {fileID: 2252735336345317594}
   m_Layer: 0
   m_Name: kolonlar_cell.008
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21602,7 +21602,7 @@ GameObject:
   - component: {fileID: 469299130866965068}
   m_Layer: 0
   m_Name: kolonlar_cell.072
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21713,7 +21713,7 @@ GameObject:
   - component: {fileID: 8202344281241162797}
   m_Layer: 0
   m_Name: Cube.049
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21824,7 +21824,7 @@ GameObject:
   - component: {fileID: 1294779967967019290}
   m_Layer: 0
   m_Name: Cube.017
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21935,7 +21935,7 @@ GameObject:
   - component: {fileID: 887636558868288000}
   m_Layer: 0
   m_Name: Cube.109
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22046,7 +22046,7 @@ GameObject:
   - component: {fileID: 4549994568560659262}
   m_Layer: 0
   m_Name: Cube.164
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22157,7 +22157,7 @@ GameObject:
   - component: {fileID: 5564858389854526590}
   m_Layer: 0
   m_Name: Cube.026
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22268,7 +22268,7 @@ GameObject:
   - component: {fileID: 1352631650751398871}
   m_Layer: 0
   m_Name: kolonlar_cell.019
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22379,7 +22379,7 @@ GameObject:
   - component: {fileID: 9055924370889978193}
   m_Layer: 0
   m_Name: Cube.065
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22490,7 +22490,7 @@ GameObject:
   - component: {fileID: 3663673997763148181}
   m_Layer: 0
   m_Name: Cube.137
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22601,7 +22601,7 @@ GameObject:
   - component: {fileID: 3723760867085601952}
   m_Layer: 0
   m_Name: Cube.027
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22712,7 +22712,7 @@ GameObject:
   - component: {fileID: 7616055541638810257}
   m_Layer: 0
   m_Name: kolonlar_cell.052
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22823,7 +22823,7 @@ GameObject:
   - component: {fileID: 8405200008811588287}
   m_Layer: 0
   m_Name: Cube.124
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22934,7 +22934,7 @@ GameObject:
   - component: {fileID: 4107730248024470902}
   m_Layer: 0
   m_Name: kolonlar_cell.087
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23046,7 +23046,7 @@ GameObject:
   - component: {fileID: 4624003243218136573}
   m_Layer: 0
   m_Name: kolonlar_cell.043
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23157,7 +23157,7 @@ GameObject:
   - component: {fileID: 8554914005667942459}
   m_Layer: 0
   m_Name: Cube.056
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23268,7 +23268,7 @@ GameObject:
   - component: {fileID: 1580945032630007937}
   m_Layer: 0
   m_Name: Cube.007
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23379,7 +23379,7 @@ GameObject:
   - component: {fileID: 8005432338073106459}
   m_Layer: 0
   m_Name: Cube.154
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23490,7 +23490,7 @@ GameObject:
   - component: {fileID: 5243475164911390924}
   m_Layer: 0
   m_Name: Cube.071
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23601,7 +23601,7 @@ GameObject:
   - component: {fileID: 5253042889899294639}
   m_Layer: 0
   m_Name: kolonlar_cell.015
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23713,7 +23713,7 @@ GameObject:
   - component: {fileID: 1919900185116977705}
   m_Layer: 0
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23824,7 +23824,7 @@ GameObject:
   - component: {fileID: 2033794578741735254}
   m_Layer: 0
   m_Name: Cube.114
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23935,7 +23935,7 @@ GameObject:
   - component: {fileID: 7583850242546160119}
   m_Layer: 0
   m_Name: Cube.006
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24046,7 +24046,7 @@ GameObject:
   - component: {fileID: 279924863483460245}
   m_Layer: 0
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24157,7 +24157,7 @@ GameObject:
   - component: {fileID: 5909176003446089752}
   m_Layer: 0
   m_Name: Cube.043
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24268,7 +24268,7 @@ GameObject:
   - component: {fileID: 5738452377315152620}
   m_Layer: 0
   m_Name: kolonlar_cell.014
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24379,7 +24379,7 @@ GameObject:
   - component: {fileID: 5381076845303130583}
   m_Layer: 0
   m_Name: Cube.162
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24490,7 +24490,7 @@ GameObject:
   - component: {fileID: 2326864261114617305}
   m_Layer: 0
   m_Name: kolonlar_cell.054
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24602,7 +24602,7 @@ GameObject:
   - component: {fileID: 351825583853717744}
   m_Layer: 0
   m_Name: Cube.032
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24713,7 +24713,7 @@ GameObject:
   - component: {fileID: 344438963709657810}
   m_Layer: 0
   m_Name: kolonlar_cell.064
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24824,7 +24824,7 @@ GameObject:
   - component: {fileID: 6417024502832134947}
   m_Layer: 0
   m_Name: Cube.002
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24935,7 +24935,7 @@ GameObject:
   - component: {fileID: 5988783245425173814}
   m_Layer: 0
   m_Name: Cube.161
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25046,7 +25046,7 @@ GameObject:
   - component: {fileID: 181182114815455407}
   m_Layer: 0
   m_Name: kolonlar_cell.053
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25157,7 +25157,7 @@ GameObject:
   - component: {fileID: 2523523671539089999}
   m_Layer: 0
   m_Name: Cube.132
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25268,7 +25268,7 @@ GameObject:
   - component: {fileID: 5001611506701356380}
   m_Layer: 0
   m_Name: Cube.012
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25379,7 +25379,7 @@ GameObject:
   - component: {fileID: 3997463751067272034}
   m_Layer: 0
   m_Name: kolonlar_cell.091
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25490,7 +25490,7 @@ GameObject:
   - component: {fileID: 5240568392535805232}
   m_Layer: 0
   m_Name: kolonlar_cell.022
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25601,7 +25601,7 @@ GameObject:
   - component: {fileID: 6221868203535668434}
   m_Layer: 0
   m_Name: kolonlar_cell.089
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25712,7 +25712,7 @@ GameObject:
   - component: {fileID: 863208697344516715}
   m_Layer: 0
   m_Name: kolonlar_cell.003
-  m_TagString: Untagged
+  m_TagString: Fracture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

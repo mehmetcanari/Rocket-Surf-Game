@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ExplosionScript : MonoBehaviour
 {
+    
+
     GameObject scoreCounter;
 
     public GameObject White1buildingFracturedPre;
@@ -56,7 +58,7 @@ public class ExplosionScript : MonoBehaviour
         scoreCounter = GameObject.FindGameObjectWithTag("ScoreCounter");
     }
     void Update()
-    {
+    {       
         transform.localScale += new Vector3(5f, 5f, 5f);
         GetComponent<MeshRenderer>().enabled = false;
         Destroy(gameObject, 1f);

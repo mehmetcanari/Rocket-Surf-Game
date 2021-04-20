@@ -29,6 +29,7 @@ TagManager:
   - Ring
   - Fiskiye
   - Purpletownhall
+  - Fracture
   layers:
   - Default
   - TransparentFX

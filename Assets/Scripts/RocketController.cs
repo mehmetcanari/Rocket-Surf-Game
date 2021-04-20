@@ -298,7 +298,7 @@ public class RocketController : MonoBehaviour
                 {
                     transform.DOLocalRotate(new Vector3(-60, rotate, roll), 0.5f); //Up force
                     m_deltaPos = (Vector2)Input.mousePosition - m_startPos;
-                    fuel -= 0.2f;
+                    fuel -= 20f * Time.deltaTime;
 
                     foreach (var item in rocketTrails)
                     {

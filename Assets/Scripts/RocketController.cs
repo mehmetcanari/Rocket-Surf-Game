@@ -275,6 +275,10 @@ public class RocketController : MonoBehaviour
                 speedSwitch = Mathf.Lerp(speedSwitch, 1, 0.05f);
                 transform.Translate(Vector3.forward * rocketForwardSpeed * speedSwitch * Time.deltaTime);
             }
+            if (fuel <= 0)
+            {
+                currentState = State.Fall;
+            }
             rb.constraints = RigidbodyConstraints.None;
 
             #region Swerve
@@ -404,12 +408,6 @@ public class RocketController : MonoBehaviour
         #endregion
 
         #region Fuel
-        if (fuel <= 0)
-        {
-            currentState = State.Fall;
-            crashTimer = transform.position.y;
-            explosionTimer = true;
-        }
         if (fuel > startFuel)
         {
             fuel = startFuel;

@@ -102,6 +102,12 @@ MonoBehaviour:
     type: 3}
   WhitetownhallFracturedPre: {fileID: 3149979786997534821, guid: 1ffbce5b52e5a2d48b345685c7160fb4,
     type: 3}
+  "k\u0131sacamFracturedPre": {fileID: 183556400878525138, guid: e874736b8b93a164c8394f38b20d9445,
+    type: 3}
+  yamukagacFracturedPre: {fileID: 5691994045051176872, guid: 6e17d766ecdba30478caaa5bb5e0c220,
+    type: 3}
+  agacucFracturedPre: {fileID: 3813131172335888297, guid: 0fdcc17fd66a16346a23bd7ae925a904,
+    type: 3}
   FiskiyeFracturedPre: {fileID: 1054521798451362937, guid: dc17b23be04c83e4ba28cd35d0566850,
     type: 3}
   Orange1buildingFracturedPre: {fileID: 457816031192382545, guid: acba95a60ecbb7a4eabd135710fe2d80,

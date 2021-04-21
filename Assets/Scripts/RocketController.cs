@@ -407,6 +407,8 @@ public class RocketController : MonoBehaviour
         if (fuel <= 0)
         {
             currentState = State.Fall;
+            crashTimer = transform.position.y;
+            explosionTimer = true;
         }
         if (fuel > startFuel)
         {
@@ -587,6 +589,28 @@ public class RocketController : MonoBehaviour
                 currentState = State.Fall;
             }
             #endregion
+
+            #region Trees Pre Explosion
+            if (other.gameObject.tag == "kısacam")
+            {
+                Instantiate(explosion, transform.position, Quaternion.identity);
+                explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
+                currentState = State.Fall;
+            }
+            else if (other.gameObject.tag == "yamukagac")
+            {
+                Instantiate(explosion, transform.position, Quaternion.identity);
+                explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
+                currentState = State.Fall;
+            }
+            else if (other.gameObject.tag == "agacuc")
+            {
+                Instantiate(explosion, transform.position, Quaternion.identity);
+                explosion.transform.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0);
+                currentState = State.Fall;
+            }
+            #endregion
+
         }
     }
 

@@ -12,10 +12,16 @@ public class ExplosionScript : MonoBehaviour
     public GameObject White2buildingFracturedPre;
     public GameObject White3buildingFracturedPre;
     public GameObject WhitetownhallFracturedPre;
+    public GameObject kısacamFracturedPre;
+    public GameObject yamukagacFracturedPre;
+    public GameObject agacucFracturedPre;
 
     public GameObject FiskiyeFracturedPre;
 
     GameObject FiskiyeFractured;
+    GameObject kısacamFractured;
+    GameObject yamukagacFractured;
+    GameObject agacucFractured;
 
     GameObject White1buildingFractured;
     GameObject White2buildingFractured;
@@ -72,10 +78,10 @@ public class ExplosionScript : MonoBehaviour
         if (other.gameObject.tag == "White1building")
         {
             Destroy(other.gameObject);
+            scoreCounter.GetComponent<ScoreCounter>().score += 10;
             White1buildingFractured = Instantiate(White1buildingFracturedPre, other.transform.position, Quaternion.identity);
             White1buildingFractured.transform.localScale = other.gameObject.transform.localScale;
             White2buildingFractured.transform.rotation = other.transform.rotation;
-            scoreCounter.GetComponent<ScoreCounter>().score += 10;
         }
         if (other.gameObject.tag == "White2building")
         {
@@ -143,6 +149,30 @@ public class ExplosionScript : MonoBehaviour
             FiskiyeFractured = Instantiate(FiskiyeFracturedPre, other.transform.position, Quaternion.identity);
             FiskiyeFractured.transform.localScale = other.gameObject.transform.localScale / 10;
             scoreCounter.GetComponent<ScoreCounter>().score += 80;
+        }
+        #endregion
+        #region Trees;
+
+        if (other.gameObject.tag == "kısacam")
+        {
+            Destroy(other.gameObject);
+            kısacamFractured = Instantiate(kısacamFracturedPre, other.transform.position, Quaternion.identity);
+            kısacamFractured.transform.localScale = other.gameObject.transform.localScale / 90;
+        }
+
+        if (other.gameObject.tag == "yamukagac")
+        {
+            Destroy(other.gameObject);
+            yamukagacFractured = Instantiate(yamukagacFracturedPre, other.transform.position, Quaternion.identity);
+            yamukagacFractured.transform.localScale = other.gameObject.transform.localScale / 90;       
+        }
+
+
+        if (other.gameObject.tag == "agacuc")
+        {
+            Destroy(other.gameObject);
+            agacucFractured = Instantiate(agacucFracturedPre, other.transform.position, Quaternion.identity);
+            agacucFractured.transform.localScale = other.gameObject.transform.localScale;
         }
         #endregion
 
@@ -216,5 +246,5 @@ public class ExplosionScript : MonoBehaviour
         }
     }
     #endregion
-  
+
 }

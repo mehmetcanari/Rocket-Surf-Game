@@ -5,7 +5,6 @@ using UnityEngine;
 public class FracturedMovement : MonoBehaviour
 {
     public GameObject[] fracturedPieces;
-    
 
     void Update()
     {
@@ -14,7 +13,7 @@ public class FracturedMovement : MonoBehaviour
 
         for (var i = fracturedPieces.Length - 1; i > -1; i--)
         {
-            fracturedPieces[i].GetComponent<Rigidbody>().AddForce(Vector3.down * 35 , ForceMode.Impulse);
+            fracturedPieces[i].GetComponent<Rigidbody>().AddForce(Vector3.down * 35, ForceMode.Impulse);
         }
         #endregion
     }

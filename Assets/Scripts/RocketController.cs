@@ -42,6 +42,7 @@ public class RocketController : MonoBehaviour
     public ParticleSystem frictionParticle;
     public ParticleSystem crashSmoke;
     public ParticleSystem ringDestroyParticle;
+    public ParticleSystem fireworkBlast;
 
 
     [Header("Rocket Movement")]
@@ -626,7 +627,7 @@ public class RocketController : MonoBehaviour
     {
         if (other.gameObject.tag == "Ring")
         {
-            Destroy(other.gameObject, 0.5f);
+            Destroy(other.gameObject);
             Instantiate(ringDestroyParticle, other.gameObject.transform.position, Quaternion.identity);
         }
     }

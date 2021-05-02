@@ -16,6 +16,7 @@ public class ScoreCounter : MonoBehaviour
     {
         calScore = score;
     }
+
     public void CalculateScore()
     {
         scoreImage.gameObject.SetActive(true);
